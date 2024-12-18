@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Cargo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="https://www.aafp.cl/">
+            <img src="img/logo.png" alt="Logo de la organización" class="logo">
+        </a>
+        <nav>
+            <a href="#tipos-de-cargo">Tipos de Cargo</a>
+            <a href="#beneficios">Beneficios</a>
+            <a href="#estadisticas">Estadísticas</a>
+            <a href="#que-son-afp">¿Qué son las AFP?</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h1 id="cargo-titulo">Detalles sobre el Cargo</h1>
+        <p id="cargo-detalle">Cargando detalles...</p>
+        
+        <script>
+            // Obtener el parámetro 'cargo' de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const cargo = urlParams.get('cargo');
+
+            // Datos de los cargos
+            const cargoDetalle = {
+                'trabajadores-por-cuenta-propia': 'Este cargo es para trabajadores independientes sin empleador.',
+                'personal-servicio-domestico': 'Este cargo es para trabajadores que realizan labores domésticas.',
+                'trabajadores-sector-privado': 'Este cargo es para trabajadores en empresas privadas.',
+                'empleadoras': 'Este cargo es para trabajadores independientes con empleados bajo su responsabilidad.',
+                'trabajadores-sector-publico': 'Este cargo es para trabajadores en el sector público o estatal.',
+                'familiar-no-remunerado': 'Este cargo es para familiares que trabajan sin remuneración directa.'
+            };
+
+            const cargoTitulos = {
+                'trabajadores-por-cuenta-propia': 'Trabajadores por Cuenta Propia',
+                'personal-servicio-domestico': 'Personal de Servicio Doméstico',
+                'trabajadores-sector-privado': 'Trabajadores del Sector Privado',
+                'empleadoras': 'Empleadoras',
+                'trabajadores-sector-publico': 'Trabajadores del Sector Público',
+                'familiar-no-remunerado': 'Familiar no Remunerado'
+            };
+
+            // Actualizar título y detalle
+            const tituloElement = document.getElementById('cargo-titulo');
+            const detalleElement = document.getElementById('cargo-detalle');
+
+            tituloElement.textContent = cargoTitulos[cargo] || 'Cargo No Disponible';
+            detalleElement.textContent = cargoDetalle[cargo] || 'Detalle no disponible.';
+        </script>
+    </main>
+</body>
+</html>
