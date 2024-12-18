@@ -17,6 +17,12 @@ header {
 .logo {
     height: 50px;
 }
+.header-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-left: 10; /* Sin margen para que esté pegado al logo */
+}
 
 nav {
     display: flex;
@@ -33,6 +39,40 @@ nav a:hover {
     color: #007bff;
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+}
+
+/* En pantallas pequeñas, ocultamos el menú y mostramos el botón de menú */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Ocultar el menú por defecto */
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        padding-top: 10px;
+        gap: 10px;
+    }
+    
+    .menu-toggle {
+        display: flex; /* Mostrar el botón de menú hamburguesa */
+    }
+    
+    nav.active {
+        display: flex; /* Mostrar el menú cuando esté activo */
+    }
+}
 .content {
     text-align: center;
     margin-top: 50px;
@@ -52,7 +92,6 @@ nav a:hover {
     gap: 20px;
     margin: 0 auto;
     width: 80%;
-
 }
 
 /* Estilos para cada rectángulo de rol */
@@ -113,31 +152,6 @@ select {
     margin-top: 10px;
     border: 1px solid #ccc;
 }
-.role-box {
-    padding: 20px;
-    margin: 10px;
-    background-color: #f0f0f0;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Para la animación */
-    cursor: pointer;
-}
-
-.role-box:hover {
-    background-color: #007bff; /* Cambiar de color al pasar el mouse */
-    color: #fff; /* Cambiar el color del texto */
-}
-
-.role-box {
-    padding: 20px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    background-color: #4CAF50; /* Ejemplo de color de fondo */
-}
-
-
-
 
 /* Estilos del contenido dentro del rectángulo */
 .role-content {
@@ -148,15 +162,11 @@ select {
     margin: 0;
     font-size: 16px;
 }
+
 .role-box a {
     display: block;
     text-decoration: none; /* Elimina el subrayado */
-    color: inherit; /* Mantiene el color del texto sin cambios */
-}
-.role-content p {
-    margin: 0;
-    font-size: 16px;
-    text-decoration: none; /* Elimina el subrayado en los párrafos dentro del contenido */
+    color: inherit; /* Mantiene el color del texto */
 }
 
 .role-box {
@@ -170,25 +180,19 @@ select {
     width: auto; /* Ajuste automático según el contenido */
     max-width: 100%; /* El ancho máximo será el 100% del contenedor */
     text-align: center;
-    min-width: 250px; /*/* Elimina subrayado de todo el enlace */
+    min-width: 250px; /* Elimina subrayado de todo el enlace */
 }
 
-.role-box a {
-    display: block;
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: inherit; /* Mantiene el color del texto */
+.role-box:hover {
+    background-color: #007bff; /* Cambiar de color al pasar el mouse */
+    color: #fff; /* Cambiar el color del texto */
 }
 
-.role-content p {
-    margin: 0;
-    font-size: 16px;
-    text-decoration: none; /* Elimina el subrayado de los párrafos */
-}
 .portada {
     background-image: url('img/agri.jpg'); /* Asegúrate de tener la imagen de fondo */
     background-size: cover;
     background-position: center;
-    height: 100vh;/* Ajusta la altura de la portada para que ocupe toda la pantalla menos el encabezado */
+    height: 100vh; /* Ajusta la altura de la portada para que ocupe toda la pantalla menos el encabezado */
     margin-top: 10px;
     display: flex;
     justify-content: center;
@@ -204,6 +208,7 @@ select {
     background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para el texto */
     border-radius: 10px;
 }
+
 .roles-section {
     height: 100vh; /* Ocupa toda la pantalla */
     padding: 20px;
@@ -225,6 +230,7 @@ select {
     gap: 20px;
     width: 80%;
 }
+
 .content h1 {
     text-align: center;
     font-size: 2.5rem;
@@ -232,6 +238,7 @@ select {
     margin-bottom: 20px;
     font-weight: bold;
 }
+
 .info-box {
     background-color: #f4f4f4; /* Color de fondo suave */
     border: 1px solid #ccc; /* Borde gris claro */
@@ -240,8 +247,45 @@ select {
     margin: 20px auto; /* Separación vertical con otros elementos */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     font-size: 1rem;
-    max-width: 600px; 
-    text-align: center;/* Tamaño de letra */
+    max-width: 600px;
+    text-align: center;
     line-height: 1.6; /* Altura de línea */
-    
 }
+
+/* Media Queries para hacer el diseño responsive */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .roles-container {
+        grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    }
+
+    .role-box {
+        font-size: 1em; /* Reducir el tamaño de la fuente */
+        padding: 15px;
+    }
+
+    .portada-texto h1 {
+        font-size: 1.8rem; /* Reducir el tamaño del texto en la portada */
+    }
+
+    .content h1 {
+        font-size: 2rem; /* Reducir el tamaño del título */
+    }
+
+    .info-box {
+        width: 90%; /* Hacer que el cuadro de información ocupe un poco más de espacio */
+    }
+}
+
