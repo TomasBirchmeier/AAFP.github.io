@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles del Cargo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
     <header>
@@ -22,7 +22,17 @@
     <main class="content">
         <h1 id="cargo-titulo">Detalles sobre el Cargo</h1>
         <p id="cargo-detalle">Cargando detalles...</p>
-        
+
+        <!-- Slider -->
+        <div id="slider" class="slider-container">
+            <div class="slides">
+                <img src="img/agri.jpg" alt="Imagen 1" class="slide">
+                <img src="img/1200x475-Produce-Workers.jpg" alt="Imagen 2" class="slide">
+                <img src="img/chile.jpg" alt="Imagen 3" class="slide">
+                <img src="img/En Chile, Hay mas de 2 millones de Personas en la Informalidad.png" alt="Imagen 3" class="slide">
+            </div>
+        </div>
+
         <script>
             // Obtener el parámetro 'cargo' de la URL
             const urlParams = new URLSearchParams(window.location.search);
@@ -53,6 +63,24 @@
 
             tituloElement.textContent = cargoTitulos[cargo] || 'Cargo No Disponible';
             detalleElement.textContent = cargoDetalle[cargo] || 'Detalle no disponible.';
+
+            // Slider
+            let currentIndex = 0;
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            const slideWidth = document.querySelector('.slide').clientWidth;
+
+            function showSlide(index) {
+                slides.style.transform = `translateX(-${index * slideWidth}px)`;
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                showSlide(currentIndex);
+            }
+
+            setInterval(nextSlide, 5000); // Cambiar cada 5 segundos
+            showSlide(currentIndex);
         </script>
     </main>
 </body>
