@@ -104,7 +104,7 @@ nav a:hover {
 .slide {
     min-width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 .slider-btn {
     position: absolute;
@@ -120,6 +120,17 @@ nav a:hover {
     z-index: 10;
     font-size: 18px;
 }
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
 
 .prev-btn {
     left: 10px;
@@ -132,7 +143,23 @@ nav a:hover {
 .slider-btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-
+.how-to-start h2 {
+    color: #0073e6; /* Color azul solo para los h2 dentro de esta sección */
+}
+.how-to-start p {
+    text-align: left; /* Alineación a la izquierda solo en esta sección */
+}
+.circle-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
 /* Explicación de los cargos */
 .explanation {
     margin-bottom: 20px;

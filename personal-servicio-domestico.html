@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Cargo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJx3d3v7tF6J1Aq5hdO5z1fZf2Pj30yZUB3i2Mmqk5xfD1c1f3fnA4dYBGAO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <a href="https://www.aafp.cl/">
+            <img src="img/logo.png" alt="Logo de la organización" class="logo">
+        </a>
+        <nav>
+            <a href="#tipos-de-cargo">Tipos de Cargo</a>
+            <a href="#beneficios">Beneficios</a>
+            <a href="#estadisticas">Estadísticas</a>
+        </nav>
+    </header>
+    <main class="content">
+        <h1>Personal servicio doméstico</h1>
+        <p>Trabajador dependiente que se desempeña en quehaceres domésticos</p>
+        <div id="slider" class="slider-container">
+            <div class="slides">
+                <img src="img/sd1.png" alt="Imagen 1" class="slide">
+                <img src="img/1200x475-Produce-Workers.jpg" alt="Imagen 2" class="slide">
+                <img src="img/chile.jpg" alt="Imagen 3" class="slide">
+                <img src="img/En Chile, Hay mas de 2 millones de Personas en la Informalidad.png" alt="Imagen 3" class="slide">
+            </div>
+            <button class="slider-btn prev-btn">&#10094;</button>
+            <button class="slider-btn next-btn">&#10095;</button>
+        </div>
+        <!-- Slider -->
+        <div class="container my-5">
+            <h3 class="text-center text-primary fw-bold mb-4">Pasos para formalizar tu empleo:</h3>
+            <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-3 p-3 bg-light rounded">
+                    <div class="circle-number d-flex justify-content-center align-items-center bg-primary text-white rounded-circle me-3" style="width: 40px; height: 40px;">1</div>
+                    <div>
+                        En primer lugar, el empleador debe estar inscrito en el sistema de registro para empleadores. 
+                        Si aún no se encuentra registrado, debe acceder al 
+                        <a href="https://tramites.dirtrab.cl/registroempresa/?caso=1" target="_blank" rel="noopener noreferrer">
+                            sitio web de trámites de la Dirección del Trabajo
+                        </a>.
+                    </div>
+                </li>
+                <li class="d-flex align-items-center mb-3 p-3 bg-light rounded">
+                    <div class="circle-number d-flex justify-content-center align-items-center bg-primary text-white rounded-circle me-3" style="width: 40px; height: 40px;">2</div>
+                    Prepara tu documentación fiscal para trabajar de manera autónoma.
+                </li>
+                <li class="d-flex align-items-center mb-3 p-3 bg-light rounded">
+                    <div class="circle-number d-flex justify-content-center align-items-center bg-primary text-white rounded-circle me-3" style="width: 40px; height: 40px;">3</div>
+                    Registra tu actividad económica en el Servicio de Impuestos Internos (SII).
+                </li>
+                <li class="d-flex align-items-center mb-3 p-3 bg-light rounded">
+                    <div class="circle-number d-flex justify-content-center align-items-center bg-primary text-white rounded-circle me-3" style="width: 40px; height: 40px;">4</div>
+                    Realiza la declaración de impuestos y paga según corresponda.
+                </li>
+            </ul>
+        </div>
+        
+    
+        <!-- Vincula el archivo de Bootstrap JS -->
+        <script>
+        // Slider
+            let currentIndex = 0; // Índice de la imagen actual
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            function showSlide(index) {
+                slides.style.transform = `translateX(-${index * 100}%)`;
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides; // Mueve al siguiente o vuelve al inicio
+                showSlide(currentIndex);
+            }
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Mueve al anterior o al final
+                showSlide(currentIndex);
+            }
+
+            // Botones de navegación manual
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            // Desplazamiento automático
+            setInterval(nextSlide, 9000); // Cambiar cada 7 segundos
+            showSlide(currentIndex); // Mostrar la primera imagen
+        </script>
+    </main>
+</body>
+</html>

@@ -105,3 +105,78 @@ nav a:hover {
     height: 100%;
     object-fit: cover;
 }
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 18px;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Estilo para el título h3 */
+h3 {
+    color: #007bff; /* Azul */
+    font-weight: bold; /* Negrita */
+    text-align: center; /* Centrado */
+    margin-bottom: 20px; /* Espaciado hacia abajo */
+}
+
+/* Contenedor principal con un ancho fijo de 1400px y centrado */
+.container {
+    width: 1400px;
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 20px;
+}
+
+/* Estilo para los items de la lista */
+ul {
+    list-style-type: none; /* Eliminar los puntos predeterminados */
+    padding-left: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #f8f9fa; /* Color de fondo para cada casilla */
+    padding: 10px;
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilo para el círculo */
+.circle-number {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Esto asegura que sea un círculo */
+    background-color: #0d6efd; /* Color azul primario */
+    color: white; /* Texto blanco */
+    flex-shrink: 0; /* Evita que el círculo cambie de tamaño */
+}
+
+/* Estilo para el texto dentro de la lista */
+li p {
+    margin: 0;
+    font-size: 16px;
+}
