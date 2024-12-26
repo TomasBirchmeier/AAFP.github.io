@@ -1,4 +1,3 @@
-/* Estilos generales */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -12,11 +11,13 @@ header {
     padding: 10px 60px;
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
+    position: relative;
 }
 
 .logo {
     height: 50px;
 }
+
 .header-title {
     font-size: 1.8rem;
     font-weight: bold;
@@ -54,23 +55,68 @@ nav a:hover {
     background-color: #333;
 }
 
-/* En pantallas pequeñas, ocultamos el menú y mostramos el botón de menú */
+/* Estilos para el menú */
+nav {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    background-color: #fff;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Inicialmente, el menú es visible solo en pantallas grandes */
 @media (max-width: 768px) {
     nav {
-        display: none; /* Ocultar el menú por defecto */
+        display: none; /* Ocultar menú por defecto en pantallas pequeñas */
         flex-direction: column;
-        width: 100%;
-        background-color: #fff;
-        padding-top: 10px;
         gap: 10px;
+        width: 100%;
+        position: absolute; /* Asegura que el menú se muestre fuera del flujo normal */
+        top: 100%; /* Coloca el menú debajo del header */
+        left: 0;
+        background-color: #fff;
+        opacity: 0;
+        height: 0;
+        transition: height 0.7s ease-out, opacity 0.7s ease-out;
+        z-index: 1; /* Para asegurarse de que esté por encima de otros elementos */
     }
-    
-    .menu-toggle {
-        display: flex; /* Mostrar el botón de menú hamburguesa */
-    }
-    
+
     nav.active {
-        display: flex; /* Mostrar el menú cuando esté activo */
+        opacity: 1;
+        height: auto;
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex; /* Mostrar el botón hamburguesa */
+    }
+}
+
+/* Estilo para los enlaces del menú */
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+}
+nav.active {
+    background-color: rgba(240, 240, 240, 1); /* Tono gris leve */
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* Media queries para tamaños de pantalla más grandes */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Ocultar el botón de menú hamburguesa en pantallas grandes */
+    }
+
+    nav {
+        display: flex; /* Mostrar menú por defecto en pantallas grandes */
     }
 }
 .content {
@@ -159,6 +205,7 @@ nav a:hover {
     color: white;
     font-weight: bold;
     font-size: 18px;
+    flex-shrink: 0; 
 }
 /* Explicación de los cargos */
 .explanation {

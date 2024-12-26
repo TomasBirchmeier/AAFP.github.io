@@ -71,7 +71,7 @@
                     </li>
                 </ul>
                 
-                <button class="btn btn-primary mt-3" onclick="document.getElementById('roles-section').scrollIntoView({behavior: 'smooth'})">
+                <button class="btn btn-primary mt-5" onclick="document.getElementById('roles-section').scrollIntoView({behavior: 'smooth'})">
                     Presiona para comenzar
                 </button>
             </div>
@@ -97,12 +97,6 @@
                     <div class="role-content">
                         <p><strong>Trabajadores del sector privado</strong></p>
                         <p>Trabajador dependiente con vínculo contractual en una unidad económica de tipo privada</p>
-                    </div>
-                </a>
-                <a href="empleadoras.html" class="role-box">
-                    <div class="role-content">
-                        <p><strong>Empleadoras</strong></p>
-                        <p>Trabajador independiente que tiene trabajadores bajo su responsabilidad</p>
                     </div>
                 </a>
                 <a href="trabajadores-sector-publico.html" class="role-box">
@@ -146,6 +140,13 @@
         // Desplazamiento automático
         setInterval(nextSlide, 9000); // Cambiar cada 7 segundos
         showSlide(currentIndex); // Mostrar la primera imagen
+        // menu
+        const menuToggle = document.querySelector('#menu-toggle');
+        const navMenu = document.querySelector('#nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
