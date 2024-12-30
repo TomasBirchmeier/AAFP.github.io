@@ -214,3 +214,34 @@ nav a:hover {
 .btn-primary:hover {
     background-color: #5e73dc; /* Cambiar color de fondo cuando pasa el mouse */
 }
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .roles-container {
+        grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    }
+
+    .role-box {
+        font-size: 1em; /* Reducir el tamaño de la fuente */
+        padding: 15px;
+    }
+
+    .portada-texto h1 {
+        font-size: 1.8rem; /* Reducir el tamaño del texto en la portada */
+    }
+
+    .content h1 {
+        font-size: 2rem; /* Reducir el tamaño del título */
+    }
+
+    .info-box {
+        width: 90%; /* Hacer que el cuadro de información ocupe un poco más de espacio */
+    }
+}
