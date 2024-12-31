@@ -131,7 +131,48 @@ nav a:hover {
     margin-bottom: 20px;
     font-weight: bold;
 }
+.highlight-text {
+    font-size: 0.8em; /* Tamaño del texto destacado */
+    font-weight: bold; /* Texto en negrita */
+    color: white; /* Texto en blanco */
+    background-color: red; /* Fondo rojo */
+    padding: 5px 10px; /* Espaciado interno */
+    display: inline-block; /* Asegura que el fondo rodee solo el texto */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio entre "¿Sabías que?" y el texto principal */
+    text-align: center; /* Centrar el texto si es necesario */
+}
+.text-overlay {
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    width: 90%;
+    color: white;
+    text-align: justify;
+    line-height: 1.4;
+}
 
+/* Tamaño de fuente proporcional en pantallas grandes */
+@media (min-width: 1300px) {
+    .text-overlay {
+        font-size: 2vw; /* Tamaño adaptado al ancho del viewport */
+    }
+}
+
+/* Ajustes para pantallas medianas */
+@media (min-width: 700px) and (max-width: 1299px) {
+    .text-overlay {
+        font-size: 3.2vw; /* Letras más grandes en tablets */
+    }
+}
+
+/* Ajustes para pantallas pequeñas (teléfonos) */
+@media (max-width: 699px) {
+    .text-overlay {
+        font-size: 5vw; /* Aumenta el tamaño en teléfonos */
+        top: 10%; /* Ajusta la posición si es necesario */
+    }
+}
 .slider-container {
     position: relative;
     width: 100%;
@@ -159,7 +200,7 @@ nav a:hover {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     color: white;
     border: none;
     border-radius: 50%;
@@ -191,7 +232,7 @@ nav a:hover {
 }
 
 .slider-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .circle-number {
