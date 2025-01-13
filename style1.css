@@ -22,7 +22,9 @@ header {
     font-size: 1.8rem;
     font-weight: bold;
     color: #333;
-    margin-left: 10; /* Sin margen para que esté pegado al logo */
+    margin-left: 10px;
+    flex: 1; /* Esto permite que el título ocupe el espacio disponible */
+    text-align: left; /* Asegura que el título no se desplace */
 }
 
 nav {
