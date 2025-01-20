@@ -3,7 +3,9 @@ body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
 }
-
+body {
+    zoom: 80%; /* Reduce el zoom al 80% */
+}
 header {
     display: flex;
     justify-content: space-between;

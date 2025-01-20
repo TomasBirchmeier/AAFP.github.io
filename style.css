@@ -5,7 +5,9 @@ body {
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-
+}
+body {
+    zoom: 80%; /* Reduce el zoom al 80% */
 }
 
 header {
