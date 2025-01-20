@@ -20,7 +20,7 @@
 </head>
 <body>
     <header>
-        <a href="https://www.aafp.cl/">
+        <a href="index.html">
             <img src="img/Formalízate.2.0.jpg" alt="Logo de la organización" class="logo">
         </a>
         <button class="menu-toggle" id="menu-toggle">
@@ -81,24 +81,46 @@
         </section>
         <section class="roles-section" id="roles-section">
             <h2 class="section-title">Selecciona cómo formalizarte</h2>
-            (Cabe destacar que esta es una versión beta, por lo que los "paso a paso" y los banner de imagenes no estan definidos correctamente) 
+            <p>(Cabe destacar que esta es una versión beta, por lo que los "paso a paso" y los banner de imágenes no están definidos correctamente)</p>
             <!-- Rectángulos de los Roles -->
             <div class="roles-container">
                 <a href="empresa.html" class="role-box">
                     <div class="role-content">
-                        <p><strong>Formaliza tu empresa</strong></p>
+                        <p style="font-size: 26px;"><strong>Formaliza tu empresa</strong></p>
                         <p>Información sobre el proceso a seguir para formalizar tu empresa</p>
                     </div>
                 </a>
-            
-                <a href="categoria.html" class="role-box">
+        
+                <div class="role-box">
                     <div class="role-content">
-                        <p><strong>Formaliza la situación laboral de tus trabajadores o la tuya propia</strong></p>
-                        <p>Información sobre los procesos para formalizar a tus trabajadores o tu propio empleo</p>
+                        <p style="font-size: 26px;"><strong>Formaliza cotizaciones</strong></p>
+                        <!-- Subcategorías dentro de "Formaliza cotizaciones" -->
+                        <div class="subcategory-container">
+                            <a href="categoria.html" class="subcategory-box" style="background-color: #ff8c00;">
+                                <div class="subcategory-content">
+                                    <p><strong>Soy Empleador</strong></p>
+                                </div>
+                            </a>
+                            <a href="categoria2.html" class="subcategory-box" style="background-color: #7ede10;">
+                                <div class="subcategory-content">
+                                    <p><strong>Soy Trabajador</strong></p>
+
+                                </div>
+                            </a>
+                            <a href="Regulariza.html" class="subcategory-box" style="background-color: #d74ec5;">
+                                <div class="subcategory-content">
+                                    <p><strong>Cotiza voluntariamente</strong></p>
+
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </a>
+                </div>
             </div>
         </section>
+        
+        
+        
     </main>
     <script>
         let currentIndex = 0; // Índice de la imagen actual
