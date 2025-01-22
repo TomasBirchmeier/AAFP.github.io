@@ -552,4 +552,32 @@ select {
 }
 .button-hover:hover {
     transform: scale(1.05); /* Agranda el botón al pasar el mouse */
+} 
+
+.result {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.result strong {
+    color: #ff1313c7;
+}
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background-color: #ff1313c7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #ff1313c7;
 }
