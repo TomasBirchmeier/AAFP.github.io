@@ -7,7 +7,7 @@ body {
     flex-direction: column;
 }
 body {
-    zoom: 80%; /* Reduce el zoom al 80% */
+    zoom: 70%; /* Reduce el zoom al 80% */
 }
 
 header {
@@ -294,11 +294,11 @@ nav a:hover {
 
 /* Colores para cada rol */
 .role-box:nth-child(1) {
-    background-color: #ff7f50; /* Naranja */
+    background-color: #ff5500; /* Naranja */
 }
 
 .role-box:nth-child(2) {
-    background-color: #6a5acd; /* Azul violeta */
+    background-color: #6752ec; /* Azul violeta */
 }
 
 .role-box:nth-child(3) {
@@ -401,8 +401,7 @@ select {
     border-radius: 10px;
 }
 
-.roles-section {
-    height: 100vh; /* Ocupa toda la pantalla */
+.roles-section { /* Ocupa toda la pantalla */
     padding: 20px;
     background-color: #ffffff; /* Color de fondo para diferenciar */
     display: flex;
