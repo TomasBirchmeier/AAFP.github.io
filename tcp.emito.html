@@ -25,23 +25,32 @@
         </nav>
     </header>
     <main class="content">
-        <h1>Emito boleta de honorarios en el SII</h1>
-        <p>Trabajadora dependiente que se desempeña en quehaceres domésticos</p>
+        <h1>Trabajador por cuenta propia que emite boleta</h1>
         <div id="slider" class="slider-container">
             <div class="slides">
-                <div class="slide" style="position: relative; display: inline-block;">
+                <div class="slide" style="position: relative; display: inline-block;font-size: 19px;">
                     <img src="img/verde3.png" alt="Imagen 1" style="width: 100%; height: auto; object-fit: cover;">
                     <div class="text-overlay">
                         <div class="highlight-text">¿Sabías que?</div>
                         <div>
-                        En Chile existe una fuerza laboral de alrededor de 10.1 millones de personas, pero solo 5.7 millones cotizaron en regla en Octubre del 2024.
+                            Las cotizaciones son obligatorias para quienes emitieron boletas de honorarios durante el 2024 por un monto bruto igual o superior a cinco ingresos mínimos mensuales (aproximadamente $2.5 millones anuales).
+                        <span style="display: block; margin-top: 5px; font-size: 12px; color: #CCCCCC;">
+                            Fuente: <a href="https://www.chileatiende.gob.cl/fichas/12016-cotizacion-de-trabajadores-que-emiten-boletas-de-honorarios" target="_blank" style="color: #CCCCCC; text-decoration: underline;">Chile Atiende</a>
+                        </span>
                         </div>
                     </div>
                 </div>
                 <div class="slide" style="position: relative; display: inline-block;">
-                    <img src="img/naranjo.png" alt="Imagen 2" style="width: 100%; height: auto;">
-                    <div style="position: absolute; bottom: 10px; left: 20px; width: 90%; height: 60px; font-size: 20px; color: white; text-align: center;">
-                        Texto sobre la imagen 2
+                    <img src="img/morado3.png" alt="Imagen 1" style="width: 100%; height: auto; object-fit: cover;font-size: 14px;">
+                    <div class="text-overlay">
+                        <div class="highlight-text">¿Sabías que?</div>
+                        <div>
+                            El Código del Trabajo en Chile establece que cualquier empleador que tenga a un trabajador sin contrato puede ser sujeto a multas y sanciones por parte de la Inspección del Trabajo.
+                            
+                        <span style="display: block; margin-top: 5px; font-size: 12px; color: #CCCCCC;">
+                            Fuente: <a href="https://losabogadoslaborales.cl/consecuencias-de-tener-un-trabajador-sin-contrato/#:~:text=Responsabilidad%20por%20derechos%20laborales,reclamaciones%20por%20parte%20del%20trabajador." target="_blank" style="color: #CCCCCC; text-decoration: underline;">LosAbogadoslaborales.cl</a>
+                        </span>
+                        </div>
                     </div>
                 </div>
                 <div class="slide" style="position: relative; display: inline-block;">
@@ -60,17 +69,30 @@
             <button class="slider-btn prev-btn">&#10094;</button>
             <button class="slider-btn next-btn">&#10095;</button>
         </div>
-        <!-- Slider -->
         <div class="container my-5">
-            <h3 class="text-center text-primary fw-bold mb-4">Pasos para formalizar tu empleo:</h3>
+            <!-- Menú de categorías -->
+            <div class="d-flex justify-content-center fw-bold">
+                <div class="btn-group" role="group" aria-label="Categorías">
+                    <a href="#benefits" class="btn btn-primary text-white fw-bold button-hover" style="width: 150px;border-right: 2px solid white;background-color: #31ad0b;">Beneficios</a>
+                    <a href="#costs" class="btn btn-primary text-white fw-bold button-hover" style="width: 150px;border-right: 2px solid white;background-color: #ff1313c7;">Costos</a>
+                    <a href="#steps" class="btn btn-primary text-white fw-bold button-hover" style="width: 150px;border-right: 2px solid white;background-color: #2f64d5;">Pasos</a>
+                </div>
+            </div>
+        </div>
+        <!-- Sección de beneficios -->
+        <div id="benefits" class="container my-5">
+            <h3 class="fw-bold" style="color: #31ad0b;">Beneficios de formalizarse:</h3>
+            <p style="font-size: 20px; line-height: 1.6;justify-content: left;">
+                Quienes emiten boletas de honorarios, al pagar sus cotizaciones a través de la Operación Renta de cada año, acceden a la misma protección que los regímenes de seguridad social existentes en Chile, es decir:
+            </p>
             <ul class="list-unstyled">
                 <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
                     <div class="d-flex align-items-start">
-                        <div class="circle-number d-flex justify-content-center align-items-center bg-primary text-white rounded-circle me-3" style="width: 40px; height: 40px;">
-                            <strong>1</strong> <!-- Número en negrita dentro del círculo -->
+                        <div class="icon-container d-flex justify-content-center align-items-center me-3">
+                            <img src="img/certificado.png" alt="Icono beneficio 1" style="width: 70px; height: 70px;" />
                         </div>
-                        <span style="display: block; margin-left: 20px; text-align: justify;">
-                            <strong>Escritura del contrato:</strong> El contrato debe ser escrito por el empleador dentro de los 15 días siguientes a la incorporación del trabajador(a) a sus labores. Pasado este plazo, se multará al empleador(a) y se presumirá legalmente que son estipulaciones del contrato aquellas que declare el trabajador(a).
+                        <span style="display: block; margin-left: 20px; text-align: justify;font-size: 20px;">
+                            <strong>Salud:</strong><br> Acceso cobertura respecto a accidentes y enfermedades de origen común (atención médica ambulatoria y hospitalaria, licencia médica, subsidios de Incapacidad Laboral (SIL), y subsidios maternales parentales).
                         </span>
                     </div>
                     <!-- Botón -->
@@ -78,18 +100,116 @@
                 </li>
                 <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
                     <div class="d-flex align-items-start">
-                        <div class="circle-number d-flex justify-content-center align-items-center bg-primary text-white rounded-circle me-3" style="width: 40px; height: 40px;">
+                        <div class="icon-container d-flex justify-content-center align-items-center me-3">
+                            <img src="img/padre-e-hijo.png" alt="Icono beneficio 1" style="width: 70px; height: 70px;" />
+                        </div>
+                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                            <span>
+                                <strong>Ley SANNA:</strong> el seguro está dirigido a padres, madres y tutores para atención, acompañamiento y cuidado personal de hijos e hijas menores de edad, que se encuentran en riesgo vital y grave condición de salud, para que puedan ausentarse justificadamente de su trabajo por un tiempo determinado. Durante este período se otorga derecho a un subsidio que reemplaza total o parcialmente su remuneración o renta mensual.
+                            </span>
+                    
+                        </div>
+                    </div>
+                    
+                </li>
+                <li class="d-flex align-items-center mb-3 p-3 bg-light rounded">
+                    <div class="d-flex align-items-start">
+                        <div class="icon-container d-flex justify-content-center align-items-center me-3">
+                            <img src="img/accidente.png" alt="Icono beneficio 1" style="width: 70px; height: 70px;" />
+                        </div>
+                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                            <span>
+                                <strong>Seguridad Laboral:</strong> Estarás protegido por el Seguro de Accidentes del trabajo y Enfermedades profesionales.
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="d-flex align-items-center mb-3 p-3 bg-light rounded">
+                    <div class="d-flex align-items-start">
+                        <div class="icon-container d-flex justify-content-center align-items-center me-3">
+                            <img src="img/lazo-negro.png" alt="Icono beneficio 1" style="width: 70px; height: 70px;" />
+                        </div>
+                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                            <span>
+                                <strong>Cuota mortuoria:</strong> Beneficio que financia los gastos del funeral de un afiliado que ha fallecido.
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="d-flex align-items-center mb-3 p-3 bg-light rounded">
+                    <div class="d-flex align-items-start">
+                        <div class="icon-container d-flex justify-content-center align-items-center me-3">
+                            <img src="img/hospital.png" alt="Icono beneficio 1" style="width: 70px; height: 70px;" />
+                        </div>
+                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                            <span>
+                                <strong>Protección de Salud:</strong> Cuentas con bonificación en prestaciones médicas bajo la modalidad de libre elección, ya sea en FONASA o la isapre que elijas.
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Sección de costos -->
+        <div id="costs" class="container my-5 vh-100">
+            <h3 class="fw-bold" style="color:#ff1313c7;">Costos de formalizarse:</h3>
+            <ul class="list-unstyled">
+        <div class="container">
+            <h2>Simulador de Cotizaciones</h2>
+            <p>Introduce el sueldo bruto para calcular las cotizaciones (por ejemplo, para 800 mil ingresa 800000 sin puntos ni comas):</p>
+            <input type="number" id="sueldo" placeholder="Ingresa tu sueldo bruto" />
+            <button onclick="calcularCotizaciones()">Calcular</button>
+            <div id="resultado" class="result" style="display: none;"></div>
+        </div>
+        <!-- Sección de pasos -->
+        <div id="steps" class="container my-5">
+            <h3 class="text-center text-primary fw-bold mb-4">Pasos para cotizar siendo independiente</h3>
+            <ul class="list-unstyled">
+                <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
+                    <div class="d-flex align-items-start">
+                        <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
+     style="width: 40px; height: 40px; background-color: #2f64d5;">
+                            <strong>1</strong> <!-- Número en negrita dentro del círculo -->
+                        </div>
+                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                            <span>
+                                <strong>Conocer la operación renta:</strong> En abril de cada año se realiza la operación renta, instancia en la que el Servicio de Impuestos Internos (SII) presenta una propuesta que debe ser revisada por el o la contribuyente y posteriormente enviada con las modificaciones, si corresponde.
+                            </span>
+                            <div class="text-start mt-3 button-hover">
+                                <a href=https://www.chileatiende.gob.cl/fichas/10199-operacion-renta-2024 class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="background-color: #2f64d5;" >
+                                    Conoce mas detalles en ChileAtiende
+                                </a>
+                            </div>
+        
+                        </div>
+                    </div>
+                    
+                </li>
+                <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
+                    <div class="d-flex align-items-start">
+                        <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
+     style="width: 40px; height: 40px; background-color: #2f64d5;">
                             <strong>2</strong> <!-- Número en negrita dentro del círculo -->
                         </div>
-                        <div style="margin-left: 20px; text-align: justify;">
+                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
                             <span>
-                                <strong>Registro del contrato:</strong> En primer lugar, el empleador debe estar inscrito en el sistema de registro para empleadores. 
-                                Si aún no se encuentra registrado, debe acceder al sitio web de trámites de la Dirección del Trabajo. 
-                                El enlace correspondiente se encuentra disponible a continuación.
-                            </span>
-                            <div class="text-start mt-3">
-                                <a href="https://tramites.dirtrab.cl/registroempresa/?caso=1" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="background-color: #1cac17;" >
-                                    Ir al sitio de la dirección del trabajo
+                                <strong>Conocer las diferencias entre coberturas:</strong>
+                                <div>
+                                    <p>Los trabajadores que emiten boletas de honorarios pueden optar por dos regímenes de cotización con distinta cobertura:</p>
+                                    <ol>
+                                        <li>
+                                            <strong>Cobertura completa:</strong> Desde 2019, el total de la retención de impuestos se destina al pago de cotizaciones, calculadas sobre el 100% de la renta imponible (80% de la renta bruta). Las tasas subirán progresivamente hasta el 17% en 2028.
+                                        </li>
+                                        <li>
+                                            <strong>Cobertura parcial:</strong> Permite cotizar por una renta imponible menor para salud y pensiones, comenzando en 47% en 2023 y aumentando gradualmente hasta el 100% en 2028. Esto afecta subsidios por licencias médicas, calculados sobre una base reducida, mientras que prestaciones de salud y seguros usan la base completa. A partir de 2028, solo existirá la cobertura completa.
+                                        </li>
+                                    </ol>
+                                </div>
+                                
+                            <div class="text-start mt-3 button-hover">
+                                <a href="https://www.chileatiende.gob.cl/fichas/12016-cotizacion-de-trabajadores-que-emiten-boletas-de-honorarios" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="background-color: #2f64d5;" >
+                                    Conoce mas detalles en ChileAtiende
                                 </a>
                             </div>
                         </div>
@@ -98,30 +218,27 @@
                 </li>
                 <li class="d-flex align-items-center mb-3 p-3 bg-light rounded">
                     <div class="d-flex align-items-start">
-                        <div class="circle-number d-flex justify-content-center align-items-center bg-primary text-white rounded-circle me-3" style="width: 40px; height: 40px;">
+                        <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
+     style="width: 40px; height: 40px; background-color: #2f64d5;">
                             <strong>3</strong> <!-- Número en negrita dentro del círculo -->
                         </div>
-                        <div style="margin-left: 20px; text-align: justify;">
+                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
                             <span>
-                                <strong>Registro en Previred:</strong> Para poder realizar cotizaciones a tu trabajador, debes tener una cuenta en Previred. 
+                                <strong>Registro en Previred:</strong> Para realizar las cotizaciones de tu trabajador, es necesario contar con una cuenta en Previred. 
+Puedes encontrar los pasos detallados para crearla en el sitio web de domestikco, plataforma que ayuda a los empleadores en la contratación de una trabajadora de casa particular.
                             </span>
-                            <div class="text-start mt-3">
-                                <a href="https://tramites.dirtrab.cl/registroempresa/?caso=1" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="background-color: #1cac17;" >
-                                    Ir al sitio de la dirección del trabajo
+                            <div class="text-start mt-3 button-hover">
+                                <a href="https://domestikco.com/como-inscribir-en-previred/" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="background-color: #2f64d5;" >
+                                    Ir al sitio de domestikco.com
                                 </a>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="d-flex align-items-center mb-3 p-3 bg-light rounded">
-                    <div class="circle-number d-flex justify-content-center align-items-center bg-primary text-white rounded-circle me-3" style="width: 40px; height: 40px;">
-                        <strong>4</strong> <!-- Número en negrita dentro del círculo -->
-                    </div>
-                    Realiza la declaración de impuestos y paga según corresponda.
-                </li>
             </ul>
         </div>
         
+        <!-- Smooth scrolling script -->
     
         <!-- Vincula el archivo de Bootstrap JS -->
         <script>
@@ -158,6 +275,49 @@
             menuToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
             });
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+            function calcularCotizaciones() {
+                const sueldo = parseFloat(document.getElementById("sueldo").value);
+
+                if (isNaN(sueldo) || sueldo <= 0) {
+                    alert("Por favor, introduce un sueldo válido.");
+                    return;
+                }
+
+                // Porcentajes de cotización
+                const afp = 10; // AFP 10%
+                const salud = 7; // Salud 7%
+                const cesantia = 0.6; // Seguro de cesantía 0.6%
+                
+                // Cálculos
+                const afpMonto = sueldo * (afp / 100);
+                const saludMonto = sueldo * (salud / 100);
+                const cesantiaMonto = sueldo * (cesantia / 100);
+                const totalDeducciones = afpMonto + saludMonto + cesantiaMonto;
+                const sueldoLiquido = sueldo - totalDeducciones;
+
+                // Mostrar resultados con formato chileno
+                const resultadoDiv = document.getElementById("resultado");
+                resultadoDiv.style.display = "block";
+                resultadoDiv.innerHTML = `
+                    <p><strong>Sueldo bruto:</strong> $${sueldo.toLocaleString("es-CL")}</p>
+                    <p><strong>Cotización AFP (10%):</strong> $${afpMonto.toLocaleString("es-CL")}</p>
+                    <p><strong>Cotización Salud (7%):</strong> $${saludMonto.toLocaleString("es-CL")}</p>
+                    <p><strong>Seguro de Cesantía (0.6%):</strong> $${cesantiaMonto.toLocaleString("es-CL")}</p>
+                    <p><strong>Total deducciones:</strong> $${totalDeducciones.toLocaleString("es-CL")}</p>
+                    <p><strong>Sueldo líquido:</strong> $${sueldoLiquido.toLocaleString("es-CL")}</p>
+                `;
+            }
+
         </script>
     </main>
 </body>

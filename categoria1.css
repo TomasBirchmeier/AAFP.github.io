@@ -294,15 +294,15 @@ nav a:hover {
 
 /* Colores para cada rol */
 .role-box:nth-child(1) {
-    background-color: #05b4c4; /* Naranja */
+    background-color: #ff5500; /* Naranja */
 }
 
 .role-box:nth-child(2) {
-    background-color: #05b4c4; /* Azul violeta */
+    background-color: #0f5ae3; /* Azul violeta */
 }
 
 .role-box:nth-child(3) {
-    background-color: ##05b4c4; /* Verde */
+    background-color: #2bc405; /* Verde */
 }
 
 .role-box:nth-child(4) {
