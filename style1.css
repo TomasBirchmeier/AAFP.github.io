@@ -157,21 +157,21 @@ nav a:hover {
 }
 
 /* Tamaño de fuente proporcional en pantallas grandes */
-@media (min-width: 1300px) {
+@media (min-width: 1101px) {
     .text-overlay {
         font-size: 2vw; /* Tamaño adaptado al ancho del viewport */
     }
 }
 
 /* Ajustes para pantallas medianas */
-@media (min-width: 700px) and (max-width: 1299px) {
+@media (min-width: 501px) and (max-width: 1100px) {
     .text-overlay {
         font-size: 3.2vw; /* Letras más grandes en tablets */
     }
 }
 
 /* Ajustes para pantallas pequeñas (teléfonos) */
-@media (max-width: 699px) {
+@media (max-width: 500px) {
     .text-overlay {
         font-size: 5vw; /* Aumenta el tamaño en teléfonos */
         top: 10%; /* Ajusta la posición si es necesario */
