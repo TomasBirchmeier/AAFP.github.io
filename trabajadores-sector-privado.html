@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles del Cargo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="style1.css">
 </head>
 <body>
@@ -25,8 +24,9 @@
         </nav>
     </header>
     <main class="content">
-        <h1>Trabajadores dependientes sin contrato</h1>
-        <p >Personas sin contrato que realizan labores bajo la supervisión y dirección de un empleador</p>
+
+<h1>Trabajadores del Sector Privado</h1>
+<p>Son aquellos empleados que prestan servicios para empresas o particulares, abarcando diversas industrias como comercio, manufactura, servicios y construcción. </p>
         <div id="slider" class="slider-container">
             <div class="slides">
                 <div class="slide" style="position: relative; display: inline-block;">
@@ -34,54 +34,384 @@
                     <div class="text-overlay">
                         <div class="highlight-text">¿Sabías que?</div>
                         <div>
-                            En Chile existe una fuerza laboral de alrededor de 10.1 millones de personas, pero solo 5.7 millones cotizaron en regla en Octubre del 2024.
+                        Si no tienes cotizaciones en regla, no podras optar a beneficios tales como el pago de una licencia médica.
+                        <span style="display: block; margin-top: 5px; font-size: 12px; color: #ffffff;">
+                            Fuente: <a href="https://www.superdesalud.gob.cl/consultas/570/w3-article-2848.html" target="_blank" style="color: #ffffff; text-decoration: underline;">Superintendencia de Salud</a>
+                        </span>
                         </div>
                     </div>
                 </div>
                 <div class="slide" style="position: relative; display: inline-block;">
-                    <img src="img/naranjo.png" alt="Imagen 2" style="width: 100%; height: auto;">
-                    <div style="position: absolute; bottom: 10px; left: 20px; width: 90%; height: 60px; font-size: 20px; color: white; text-align: center;">
-                        Texto sobre la imagen 2
+                    <img src="img/morado3.png" alt="Imagen 1" style="width: 100%; height: auto; object-fit: cover;font-size: 14px;">
+                    <div class="text-overlay">
+                        <div class="highlight-text">¿Sabías que?</div>
+                        <div>
+                            El Código del Trabajo en Chile establece que cualquier empleador que tenga a un trabajador sin contrato puede ser sujeto a multas y sanciones por parte de la Inspección del Trabajo.
+                            
+                        <span style="display: block; margin-top: 5px; font-size: 12px; color: #ffffff;">
+                            Fuente: <a href="https://losabogadoslaborales.cl/consecuencias-de-tener-un-trabajador-sin-contrato/#:~:text=Responsabilidad%20por%20derechos%20laborales,reclamaciones%20por%20parte%20del%20trabajador." target="_blank" style="color: #ffffff; text-decoration: underline;">LosAbogadoslaborales.cl</a>
+                        </span>
+                        </div>
                     </div>
                 </div>
                 <div class="slide" style="position: relative; display: inline-block;">
-                    <img src="img/amarillo.png" alt="Imagen 3" style="width: 100%; height: auto;">
-                    <div style="position: absolute; bottom: 10px; left: 20px; width: 90%; height: 60px; font-size: 20px; color: white; text-align: center;">
-                        Texto sobre la imagen 3
+                    <img src="img/azul3.png" alt="Imagen 3" style="width: 100%; height: auto;">
+                    <div class="text-overlay">
+                        <div class="highlight-text">¿Sabías que?</div>
+                        <div>
+                            Por cada año <strong>NO</strong> cotizado, pierdes un 6% de tu sueldo base al momento de jubilar. Si no realizas los trámites necesarios para estar al día con tus cotizaciones, estarás perdiendo dinero y reduciendo tu pensión en el futuro.
+                        <span style="display: block; margin-top: 5px; font-size: 12px; color: #ffffff;">
+                            Fuente: <a href="https://gestionmunicipal.cl/cuanto-se-pierde-por-cada-ano-no-cotizado-chile/?utm_source=chatgpt.com" target="_blank" style="color: #ffffff; text-decoration: underline;">gestionmunicipal.cl</a>
+                        </span>
+                        </div>
                     </div>
                 </div>
                 <div class="slide" style="position: relative; display: inline-block;">
-                    <img src="img/verde.png" alt="Imagen 4" style="width: 100%; height: auto;">
-                    <div style="position: absolute; bottom: 10px; left: 20px; width: 90%; height: 60px; font-size: 20px; color: white; text-align: center;">
-                        Texto sobre la imagen 4
+                    <img src="img/verde3.png" alt="Imagen 3" style="width: 100%; height: auto;">
+                    <div class="text-overlay">
+                        <div class="highlight-text">¿Sabías que?</div>
+                        <div>
+                            Existe un permiso de residencia para trabajadores de temporada enfocado para extranjeros
+                        <span style="display: block; margin-top: 5px; font-size: 12px; color: #ffffff;">
+                            Fuente: <a href="https://ips.gob.cl/trabajadora-de-casa-particular" target="_blank" style="color: #ffffff; text-decoration: underline;">Instituto de Previsión Social</a>
+                        </span>
+                        </div>
                     </div>
                 </div>
             </div>
             <button class="slider-btn prev-btn">&#10094;</button>
             <button class="slider-btn next-btn">&#10095;</button>
         </div>
-        <!-- Slider -->
         <div class="container my-5">
-            <h3 class="text-center text-primary fw-bold mb-4">Pasos para formalizar tu empleo:</h3>
+            <!-- Menú de categorías -->
+            <div class="d-flex justify-content-center fw-bold">
+                <div class="btn-group" role="group" aria-label="Categorías">
+                    <a href="#benefits" class="btn btn-primary text-white fw-bold button-hover" style="width: 150px;border-right: 2px solid white;background-color: #31ad0b;">Beneficios</a>
+                    <a href="#costs" class="btn btn-primary text-white fw-bold button-hover" style="width: 150px;border-right: 2px solid white;background-color: #ff1313c7;">Costos</a>
+                    <a href="#steps1" class="btn btn-primary text-white fw-bold button-hover" style="width: 150px;border-right: 2px solid white;background-color: #2f64d5;">Pasos</a>
+                </div>
+            </div>
+        </div>
+        <div id="steps" class="container my-5">
+            <h3 class="text-center text-primary fw-bold mb-4"> ¿Cómo tener un empleo formal en el sector privado?</h3>
+            <p style="font-size: 22px;text-align: left;">Si eres trabajador del sector privado, el primer paso para saber realizar es conocer las siguientes temas claves.</p>
+
             <ul class="list-unstyled">
-                <li class="d-flex align-items-center mb-3 p-3 bg-light rounded">
-                    <div class="circle-number d-flex justify-content-center align-items-center bg-primary text-white rounded-circle me-3" style="width: 40px; height: 40px;">1</div>
-                    Revisa los requisitos legales relacionados con los trabajadores independientes.
+                <li class="d-flex flex-column text-primary p-3  rounded" style="background-color: #ffffff;">
+                    <div class="d-flex align-items-start">
+                        <div style="margin-left: 20px; text-align: left; font-size: 25px; font-weight: bold;">
+                            <span>Temas claves que debes saber</span>
+                        </div>
+                    </div>
+                    <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
+                        <div class="d-flex align-items-start">
+                            <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
+         style="width: 40px; height: 40px; background-color: #2f64d5;">
+                                <strong>1</strong> <!-- Número en negrita dentro del círculo -->
+                            </div>
+                            <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                                <span>
+                                    <strong>¿Cuál es el plazo para escriturar el contrato de trabajo?:</strong><br> De conformidad con lo dispuesto en el artículo 9° del Código del Trabajo, el empleador dispone de un plazo de 15 días para escriturar el contrato de trabajo, contados desde la incorporación del trabajador, salvo que se trate de contrato por obra, trabajo determinado o de duración inferior a 30 días, caso en el cual el plazo se reduce a 5 días.<br> El empleador siempre deberá entregar una copia del contrato de trabajo debidamente firmado al trabajador de acuerdo con lo establecido en el artículo 146 ter del Código del Trabajo.
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
+                        <div class="d-flex align-items-start">
+                            <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
+         style="width: 40px; height: 40px; background-color: #2f64d5;">
+                                <strong>2</strong> <!-- Número en negrita dentro del círculo -->
+                            </div>
+                            <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                                <span>
+                                    <strong>¿A qué está obligado el empleador?:</strong><br>                             
+                                    <ul>
+                                        <li><strong>Cotizaciones (AFP e Isapre):</strong> El empleador debe pagar mensualmente las cotizaciones previsionales y de salud de cada trabajador, descontándolas del sueldo bruto.</li>
+                                    
+                                        <li><strong>Seguro Obligatorio contra Accidentes Laborales:</strong> Este seguro protege a los trabajadores en caso de sufrir accidentes laborales o enfermedades profesionales. Debe ser cubierto con un <strong>0,95%</strong> de las remuneraciones imponibles del trabajador.</li>
+                                    
+                                        <li><strong>Seguro de Cesantía:</strong> Obligatorio para proteger al trabajador en caso de quedar desempleado. Corresponde al <strong>3%</strong> del salario imponible, del cual el empleador debe cubrir el <strong>2.4%</strong> y el trabajador, junto con el Estado, el <strong>0.6%</strong> restante.</li>
+                                    
+                                        <li><strong>Feriado Legal:</strong> Todo trabajador que cumpla un año laborando en la empresa tiene derecho a 15 días hábiles de vacaciones.</li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    
+                </li>
+            <ul>
+        </div>
+        <!-- Sección de beneficios -->
+        <div id="benefits" class="container my-5">
+            <h3 class="fw-bold" style="color: #31ad0b;">Beneficios:</h3>
+            <div style="margin-left: 30px; text-align: left; font-size: 25px; font-weight: bold; color: #31ad0b;">
+                <span>Trabajadores</span>
+            </div>
+            <ul class="list-unstyled">
+                <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
+                    <div class="d-flex align-items-start">
+                        <div class="icon-container d-flex justify-content-center align-items-center me-3">
+                            <img src="img/certificado.png" alt="Icono beneficio 1" style="width: 70px; height: 70px;" />
+                        </div>
+                        <span style="display: block; margin-left: 20px; text-align: justify;font-size: 20px;">
+                            <strong>Pago de Licencias:</strong><br>Al cotizar regularmente en una AFP, tendrás derecho a pago de licencia medica en caso de enfermedad o accidente.
+                        </span>
+                    </div>
+                    <!-- Botón -->
+                   
+                </li>
+                <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
+                    <div class="d-flex align-items-start">
+                        <div class="icon-container d-flex justify-content-center align-items-center me-3">
+                            <img src="img/jubilacion.png" alt="Icono beneficio 1" style="width: 70px; height: 70px;" />
+                        </div>
+                        <span style="display: block; margin-left: 20px; text-align: justify;font-size: 20px;">
+                            <strong>Una pensión mayor:</strong><br>Mientras mayor sea la densidad de cotización, mayor será tu ahorro. Por lo tanto, recibiras una pensión más alta.
+                        </span>
+                    </div>
+                    <!-- Botón -->
+                   
+                </li>
+                <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
+                    <div class="d-flex align-items-start">
+                        <div class="icon-container d-flex justify-content-center align-items-center me-3">
+                            <img src="img/padre-e-hijo.png" alt="Icono beneficio 1" style="width: 70px; height: 70px;" />
+                        </div>
+                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                            <span>
+                                <strong>Ley SANNA:</strong><br>Seguro para padres o quienes estén a cargo de niños con una condición grave de salud, para que puedan ausentarse de ser necesario.
+                            </span>
+                    
+                        </div>
+                    </div>
+                    
                 </li>
                 <li class="d-flex align-items-center mb-3 p-3 bg-light rounded">
-                    <div class="circle-number d-flex justify-content-center align-items-center bg-primary text-white rounded-circle me-3" style="width: 40px; height: 40px;">2</div>
-                    Prepara tu documentación fiscal para trabajar de manera autónoma.
+                    <div class="d-flex align-items-start">
+                        <div class="icon-container d-flex justify-content-center align-items-center me-3">
+                            <img src="img/accidente.png" alt="Icono beneficio 1" style="width: 70px; height: 70px;" />
+                        </div>
+                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                            <span>
+                                <strong>Seguridad Laboral:</strong><br>Te protege frente 
+                                a los accidentes a causa o con ocasión del trabajo, accidentes de trayecto a tu trabajo y/o 
+                                ante enfermedades causadas de manera directa por el ejercicio de tu trabajo. 
+                            </span>
+                        </div>
+                    </div>
                 </li>
                 <li class="d-flex align-items-center mb-3 p-3 bg-light rounded">
-                    <div class="circle-number d-flex justify-content-center align-items-center bg-primary text-white rounded-circle me-3" style="width: 40px; height: 40px;">3</div>
-                    Registra tu actividad económica en el Servicio de Impuestos Internos (SII).
+                    <div class="d-flex align-items-start">
+                        <div class="icon-container d-flex justify-content-center align-items-center me-3">
+                            <img src="img/lazo-negro.png" alt="Icono beneficio 1" style="width: 70px; height: 70px;" />
+                        </div>
+                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                            <span>
+                                <strong>Cuota mortuoria:</strong><br>Beneficio que financia los gastos del funeral de un afiliado que ha fallecido.
+                            </span>
+                        </div>
+                    </div>
                 </li>
                 <li class="d-flex align-items-center mb-3 p-3 bg-light rounded">
-                    <div class="circle-number d-flex justify-content-center align-items-center bg-primary text-white rounded-circle me-3" style="width: 40px; height: 40px;">4</div>
-                    Realiza la declaración de impuestos y paga según corresponda.
+                    <div class="d-flex align-items-start">
+                        <div class="icon-container d-flex justify-content-center align-items-center me-3">
+                            <img src="img/hospital.png" alt="Icono beneficio 1" style="width: 70px; height: 70px;" />
+                        </div>
+                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                            <span>
+                                <strong>Protección de Salud:</strong><br>Cuentas con bonificación en prestaciones médicas bajo la modalidad de libre elección, ya sea en FONASA o la isapre que elijas.
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div style="margin-left: 30px; text-align: left; font-size: 25px; font-weight: bold; color: #31ad0b;">
+                <span>Empleadores</span>
+            </div>
+            <ul class="list-unstyled">
+                <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
+                <div class="d-flex align-items-start">
+                    <div class="icon-container d-flex justify-content-center align- items-center me-3">
+                        <img src="img/multa.png" alt="Icono beneficio 1" style="width: 70px; height: 70px;" />
+                    </div>
+                    <span style="display: block; margin-left: 20px; text-align: justify;font-size: 20px;">
+                        <strong>No estar expuesto a multas:</strong><br>La falta de escrituración del contrato constituye una infracción sancionada con una multa que oscila entre 1 y 5 UTM, adicionalmente, si se realiza un juicio legal para el empleador existirá una dificultad probatoria ya que se presumirá legalmente que son estipulaciones del contrato todas las que declare el trabajador. Por lo tanto, una correcta formalización del contrato permite eximir al empleador de dichas sanciones.
+                    </span>
+                </div> 
                 </li>
             </ul>
         </div>
+        
+        <!-- Sección de costos -->
+        <div id="costs" class="container my-5">
+            <h3 class="fw-bold" style="color:#ff1313c7;">¿Cuáles son los costos?:</h3>
+            <ul class="list-unstyled">
+                <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
+                    <div class="d-flex align-items-start">
+                        <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
+     style="width: 40px; height: 40px; background-color: #ff1313c7;">
+                            <strong>1</strong> <!-- Número en negrita dentro del círculo -->
+                        </div>
+                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                            <span>
+                                <strong>Realizar el trámite no tiene ningun costo</strong>
+                            </span>
+        
+                        </div>
+                    </div>
+                    
+                </li>
+
+            </ul>
+        </div>
+        <!-- Sección de pasos -->
+         
+        <div id="steps1" class="container my-5">
+            <h3 class="text-center text-primary fw-bold mb-4">Pasos:</h3>
+            <ul class="list-unstyled">
+                <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
+                    <div class="d-flex align-items-start">
+                        <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
+     style="width: 40px; height: 40px; background-color: #2f64d5;">
+                            <strong>1</strong> <!-- Número en negrita dentro del círculo -->
+                        </div>
+                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                            <span>
+                                <strong>Escritura del contrato:</strong><br> 
+                                El empleador dispone de un plazo de 15 días para escriturar el contrato de trabajo, contado desde la incorporación del trabajador. Si el contrato es por obra, trabajo determinado o de duración inferior a 30 días, el plazo se reduce a 5 días. La falta de contrato escrito hace presumir legalmente que son estipulaciones del contrato las que declare el trabajador. Además, la no escrituración del contrato se sanciona con multa de una a cinco UTM.
+                            </span>
+                            <div class="text-start mt-3 button-hover">
+                                <a href="https://www.dt.gob.cl/portal/1628/w3-article-60780.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="background-color: #2f64d5;" >
+                                    Descubre más
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </li>
+                <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
+                    <div class="d-flex align-items-start">
+                        <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
+     style="width: 40px; height: 40px; background-color: #2f64d5;">
+                            <strong>2</strong> <!-- Número en negrita dentro del círculo -->
+                        </div>
+                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                            <span>
+                                <strong>Registro del contrato:</strong><br> Esta tarea debe cumplirla el empleador, para registrar el contrato, el empleador debe estar inscrito en el sistema de registro para empleadores. 
+Si aún no está registrado, puede hacerlo accediendo al sitio web de trámites de la Dirección del Trabajo. 
+Para conocer el paso a paso, visita el siguiente enlace:
+
+                            </span>
+                            <div class="text-start mt-3 button-hover">
+                                <a href="https://www.dt.gob.cl/portal/1626/w3-article-121013.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="background-color: #2f64d5;" >
+                                    Ir al sitio de la dirección del trabajo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </li>
+            </ul>
+        </div>
+        <div id="questions" class="container my-5 p-3 rounded" style=" padding-top: 30px;padding-bottom: 30px;">
+            <h3 class="text-center  text-dark fw-bold mb- ">Preguntas Frecuentes</h3>
+            <ul class="list-unstyled">
+                <li class="d-flex flex-column mb-3 p-3 rounded" style="background-color: #fdf2b4;">
+                    <div class="d-flex align-items-start">
+                        <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
+                        style="width: 40px; height: 40px; background-color: #eed010;">
+                            <strong>1</strong>
+                        </div>
+                        <div style="margin-left: 20px; text-align: justify; font-size: 20px;">
+                            <span>
+                                <strong>¿Dónde Puedo Revisar Que Mis Cotizaciones Se Hayan Pagado Correctamente?</strong><br>
+                                <p>
+                                    A partir del 1 de abril podrás revisar el detalle de tus cotizaciones previsionales que calculamos al realizar tu Declaración de Renta. Sin embargo, ten presente que es la Tesorería General de la República quien realiza el pago a las instituciones previsionales.
+
+Para verificar que las instituciones correspondientes hayan recibido el pago de tus cotizaciones, puedes consultar según el siguiente detalle:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Seguro de Invalidez y Sobrevivencia 2023-2024:</strong> 
+                                        En la AFP respectiva.
+                                    </li>
+                            
+                                    <li>
+                                        <strong>Seguro de Accidentes Laborales y Enfermedades Profesionales y Seguro establecido en la Ley SANNA 2023-2024:</strong> 
+                                        En la Mutual respectiva o el ISL, según corresponda.
+                                    </li>
+                            
+                                    <li>
+                                        <strong>Cotizaciones de Salud 2023-2024:</strong> 
+                                        Solicitar el certificado de cotizaciones en la Isapre a la que te encuentras afiliada o afiliado, o en Fonasa, según corresponda.
+                                    </li>
+                            
+                                    <li>
+                                        <strong>Cotizaciones de Pensión:</strong> 
+                                        Revisar la cartola de cotizaciones del año 2023, en la AFP a la que te encuentras afiliada o afiliado.
+                                    </li>
+                                </ul>
+                                <br>
+                                <p>
+                                   Visita el siguiente para conocer si tienes alguna deuda previsional:
+                                </p>
+                              
+                                <div class="text-start mt-3 button-hover">
+                                    <a href="https://www.spensiones.cl/apps/certificados/formConsultaDeuda.php" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="background-color: #f5a926;" >
+                                        Consulta de Deuda Previsional
+                                    </a>
+                                </div>
+                            </span>
+                        </div>
+                    </li>
+                </li>
+                <li class="d-flex flex-column mb-3 p-3 rounded" style="background-color: #fdf2b4;">
+                    <div class="d-flex align-items-start">
+                        <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
+                        style="width: 40px; height: 40px; background-color: #eed010;">
+                            <strong>2</strong>
+                        </div>
+                        <div style="margin-left: 20px; text-align: justify; font-size: 20px;">
+                            <span>
+                                <strong>¿Cuál es el máximo diario de horas extraordinarias? </strong><br>
+                                <p>
+                                    Pueden pactarse como horas extraordinarias hasta un máximo de dos por día,
+ siempre y cuando no perjudiquen la salud del trabajador, y sólo para atender necesidades o
+ situaciones temporales de la empresa. Dicho pacto deberá constar por escrito en el contrato
+ o en un acto posterior y tener una vigencia transitoria de tres meses, el
+ cual puede prorrogarse por acuerdo de las partes. Sin embargo, se consideran como horas
+ extraordinarias las que se trabajen en exceso de la jornada pactada, con conocimiento del
+ empleador.
+                                </p>
+                           
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="d-flex flex-column mb-3 p-3 rounded" style="background-color: #fdf2b4;">
+                    <div class="d-flex align-items-start">
+                        <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
+                        style="width: 40px; height: 40px; background-color: #eed010;">
+                            <strong>3</strong>
+                        </div>
+                        <div style="margin-left: 20px; text-align: justify; font-size: 20px;">
+                            <span>
+                                <strong>¿Cuál es la forma de pagar horas extraordinarias? </strong><br>
+                                <p>
+                                    El Código del Trabajo señala que las horas extraordinarias se pagan con un recargo
+ del 50% sobre el sueldo convenido para la jornada ordinaria y deberá liquidarse y pagarse
+ conjuntamente con las remuneraciones del respectivo período. 
+                            </span>
+                            <span style="display: block; margin-top: 5px; font-size: 12px; color: #000000;">
+                                Fuente: <a href="https://www.dt.gob.cl/portal/1629/w3-article-60654.html" target="_blank" style="color: #000000; text-decoration: underline;">Dirección del trabajo</a>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- Smooth scrolling script -->
     
         <!-- Vincula el archivo de Bootstrap JS -->
         <script>
@@ -118,7 +448,51 @@
             menuToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
             });
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+            function calcularCotizaciones() {
+                const sueldo = parseFloat(document.getElementById("sueldo").value);
+
+                if (isNaN(sueldo) || sueldo <= 0) {
+                    alert("Por favor, introduce un sueldo válido.");
+                    return;
+                }
+
+                // Porcentajes de cotización
+                const afp = 10; // AFP 10%
+                const salud = 7; // Salud 7%
+                const cesantia = 0.6; // Seguro de cesantía 0.6%
+                
+                // Cálculos
+                const afpMonto = sueldo * (afp / 100);
+                const saludMonto = sueldo * (salud / 100);
+                const cesantiaMonto = sueldo * (cesantia / 100);
+                const totalDeducciones = afpMonto + saludMonto + cesantiaMonto;
+                const sueldoLiquido = sueldo - totalDeducciones;
+
+                // Mostrar resultados con formato chileno
+                const resultadoDiv = document.getElementById("resultado");
+                resultadoDiv.style.display = "block";
+                resultadoDiv.innerHTML = `
+                    <p><strong>Sueldo bruto:</strong> $${sueldo.toLocaleString("es-CL")}</p>
+                    <p><strong>Cotización AFP (10%):</strong> $${afpMonto.toLocaleString("es-CL")}</p>
+                    <p><strong>Cotización Salud (7%):</strong> $${saludMonto.toLocaleString("es-CL")}</p>
+                    <p><strong>Seguro de Cesantía (0.6%):</strong> $${cesantiaMonto.toLocaleString("es-CL")}</p>
+                    <p><strong>Total deducciones:</strong> $${totalDeducciones.toLocaleString("es-CL")}</p>
+                    <p><strong>Sueldo líquido:</strong> $${sueldoLiquido.toLocaleString("es-CL")}</p>
+                `;
+            }
+
         </script>
     </main>
 </body>
 </html>
+       
