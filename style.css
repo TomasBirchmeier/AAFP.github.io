@@ -170,26 +170,92 @@ nav a:hover {
 }
 
 /* Tamaño de fuente proporcional en pantallas grandes */
-@media (min-width: 1300px) {
+
+
+/* Ajustes para pantallas medianas */
+@media (min-width: 1001px) {
     .text-overlay {
-        font-size: 2vw; /* Tamaño adaptado al ancho del viewport */
+        font-size: 1.9vw; /* Tamaño adaptado al ancho del viewport */
+    }
+}
+@media (min-width: 801px) and (max-width: 1000px){
+    .text-overlay {
+        font-size: 3vw; /* Tamaño adaptado al ancho del viewport */
     }
 }
 
 /* Ajustes para pantallas medianas */
-@media (min-width: 700px) and (max-width: 1299px) {
+@media (min-width: 421px) and (max-width: 800px) {
     .text-overlay {
-        font-size: 2.7vw; /* Letras más grandes en tablets */
+        font-size: 3.4vw; /* Letras más grandes en tablets */
+    }
+    .content { 
+        transform: scale(0.75);
+        transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
+    }
+
+    /* Aplica el estilo fijo al header */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px; /* Ajusta el padding según lo necesites */
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        z-index: 1000;
+    }
+    /* Espacio extra en el body para que el contenido no se oculte debajo del header */
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
+    /* Añadir espacio en el body para que el contenido no se oculte debajo del header */
+    body {
+        padding-top: 120px; /* Asegura que el contenido no se quede bajo el header */
     }
 }
 
 /* Ajustes para pantallas pequeñas (teléfonos) */
-@media (max-width: 699px) {
+/* Media query para pantallas pequeñas */
+@media (max-width: 420px) {
+    /* Solo escala el contenido principal */
     .text-overlay {
-        font-size: 5vw; /* Aumenta el tamaño en teléfonos */
-        top: 10%; /* Ajusta la posición si es necesario */
+        font-size: 5vw; /* Letras más grandes en tablets */
+    }
+    .content { 
+        transform: scale(0.75);
+        transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
+    }
+
+    /* Aplica el estilo fijo al header */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px; /* Ajusta el padding según lo necesites */
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        z-index: 1000;
+    }
+    /* Espacio extra en el body para que el contenido no se oculte debajo del header */
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
+    /* Añadir espacio en el body para que el contenido no se oculte debajo del header */
+    body {
+        padding-top: 120px; /* Asegura que el contenido no se quede bajo el header */
     }
 }
+
 .slider-container {
     position: relative;
     width: 100%;
