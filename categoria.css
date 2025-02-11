@@ -469,7 +469,10 @@ select {
         font-size: 2rem; /* Reducir el tamaño del título */
         flex-direction: column;
     }
-
+    .content { 
+        transform: scale(0.75);
+        transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
+    }
     .info-box {
         width: 90%; /* Hacer que el cuadro de información ocupe un poco más de espacio */
     }
@@ -483,6 +486,10 @@ select {
     }
     header {
         padding: 10px 20px; /* Reducir el padding del header */
+    }
+    .content { 
+        transform: scale(0.75);
+        transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
     }
     .roles-container {
         grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
@@ -498,6 +505,10 @@ select {
     }
     header {
         padding: 10px 20px; /* Reducir el padding del header */
+    }
+    .content { 
+        transform: scale(0.75);
+        transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
     }
     .roles-container {
         grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
