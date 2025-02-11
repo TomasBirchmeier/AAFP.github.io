@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portada AFP</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <style>
+        .full-page-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .first-section {
+            background-color: #f5f5f5;
+        }
+
+        .second-section {
+            background-color: #eaeaea;
+        }
+
+        /* Oculta temporalmente otras secciones al inicio */
+        .hidden {
+            display: none;
+        }
+
+        /* Botón de navegación entre páginas */
+        .navigate-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .navigate-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/Formalízate.2.0.jpg" alt="Logo de la organización" class="logo">
+        </a>
+        <nav id="nav-menu">
+            <a href="#tipos-de-cargo">Categorías de Trabajo</a>
+            <a href="#beneficios">Beneficios</a>
+        </nav>
+    </header>
+
+    <!-- Primera plana con banner y sección de roles -->
+    <section id="first-section" class="full-page-section first-section">
+        <div id="slider" class="slider-container">
+            <div class="slides">
+                <div class="slide">
+                    <img src="img/verde3.png" alt="Imagen 1" style="width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+
+        <div class="roles-container mt-4">
+            <a href="categoria.html" class="role-box">
+                <div class="role-content">
+                    <p style="font-size: 26px;"><strong>Soy Empleador</strong></p>
+                </div>
+            </a>
+            <a href="categoria2.html" class="role-box">
+                <div class="role-content">
+                    <p style="font-size: 26px;"><strong>Soy Trabajador</strong></p>
+                </div>
+            </a>
+        </div>
+
+        <button id="next-btn" class="navigate-btn">Ver estadísticas</button>
+    </section>
+
+    <!-- Segunda plana con el gráfico -->
+    <section id="second-section" class="full-page-section second-section hidden">
+        <div class="flourish-embed flourish-chart" data-src="visualisation/21575552">
+            <script src="https://public.flourish.studio/resources/embed.js"></script>
+            <noscript>
+                <img src="https://public.flourish.studio/visualisation/21575552/thumbnail" width="100%" alt="chart visualization" />
+            </noscript>
+        </div>
+        <button id="prev-btn" class="navigate-btn">Volver al inicio</button>
+    </section>
+
+    <script>
+        // Referencias de las secciones y botones
+        const firstSection = document.querySelector('#first-section');
+        const secondSection = document.querySelector('#second-section');
+        const nextBtn = document.querySelector('#next-btn');
+        const prevBtn = document.querySelector('#prev-btn');
+
+        // Navegar hacia la sección de estadísticas
+        nextBtn.addEventListener('click', () => {
+            firstSection.classList.add('hidden');
+            secondSection.classList.remove('hidden');
+        });
+
+        // Volver al inicio
+        prevBtn.addEventListener('click', () => {
+            secondSection.classList.add('hidden');
+            firstSection.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

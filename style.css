@@ -21,11 +21,11 @@ header {
     flex-wrap: nowrap;  
 }
 .content {
+    min-height: 100vh;
     padding-top: 30px;  /* Ajusta este valor según la altura de tu encabezado */
     /* Si el encabezado tiene 10px de padding y cualquier otro valor de altura, 
        usa un valor mayor que la altura total del encabezado */
 }
-
 .logo {
     height: 120px;
 }
@@ -42,7 +42,12 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
+.page-section {
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana *//* Ancla en el inicio al hacer scroll */
+}
+.page-section:nth-of-type(2) {
+    background-color: #00abe4; /* Color de fondo para la segunda sección */
+}
 nav {
     display: flex;
     gap: 15px;
@@ -177,10 +182,59 @@ nav a:hover {
     .text-overlay {
         font-size: 1.9vw; /* Tamaño adaptado al ancho del viewport */
     }
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px; /* Ajusta el padding según lo necesites */
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        z-index: 1000;
+    }
+    /* Espacio extra en el body para que el contenido no se oculte debajo del header */
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
+    /* Añadir espacio en el body para que el contenido no se oculte debajo del header */
+    body {
+        padding-top: 120px; /* Asegura que el contenido no se quede bajo el header */
+    }
+  
 }
 @media (min-width: 801px) and (max-width: 1000px){
     .text-overlay {
         font-size: 3vw; /* Tamaño adaptado al ancho del viewport */
+    }
+    .content { 
+        transform: scale(0.8);
+        transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
+    }
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px; /* Ajusta el padding según lo necesites */
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        z-index: 1000;
+    }
+    /* Espacio extra en el body para que el contenido no se oculte debajo del header */
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
+    /* Añadir espacio en el body para que el contenido no se oculte debajo del header */
+    body {
+        padding-top: 120px; /* Asegura que el contenido no se quede bajo el header */
     }
 }
 
@@ -224,7 +278,7 @@ nav a:hover {
 @media (max-width: 420px) {
     /* Solo escala el contenido principal */
     .text-overlay {
-        font-size: 5vw; /* Letras más grandes en tablets */
+        font-size: 4vw; /* Letras más grandes en tablets */
     }
     .content { 
         transform: scale(0.75);
@@ -585,4 +639,21 @@ select {
 .subcategory-content p {
     margin: 5px 0;
     font-size: 19px;
+}
+
+#estadisticas {
+    margin-top: -300px;
+    height: 100vh;
+    max-width: 1200px; /* Puedes ajustar este valor según tus necesidades */
+    margin: 0 auto; /* Centra la sección en la página */
+    padding: 20px;
+    background-color: #ffffff; /* Fondo opcional para resaltar la sección */
+    border-radius: 12px;
+}
+
+/* Asegura que el contenido del gráfico no desborde */
+.flourish-embed {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
