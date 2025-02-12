@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portada AFP</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="categoria1_trab.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/Formalízate.2.0.jpg" alt="Logo de la organización" class="logo">
+        </a>
+        <button class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav id="nav-menu">
+            <a href="#tipos-de-cargo">Categorías de Trabajo</a>
+            <a href="#beneficios">Beneficios</a>
+            <a href="#estadisticas">Estadísticas</a>
+        </nav>
+    </header>
+    
+
+    <main class="content">
+        <h1>Portal de Información para empleadores</h1>
+        <section class="roles-section" id="roles-section">
+            <h2 class="section-title">¿Cómo realizar una contratación?</h2>
+            <!-- Rectángulos de los Roles -->
+            <div class="container my-5">
+                <!-- Menú de categorías -->
+                <div class="d-flex justify-content-center fw-bold">
+                    <div class="btn-group" role="group" aria-label="Categorías">
+                        <a href="#steps1" class="btn btn-primary text-white fw-bold button-hover" style="width: 150px;border-right: 2px solid white;background-color: #2f64d5;">Pasos</a>
+                        <a href="#benefits" class="btn btn-primary text-white fw-bold button-hover" style="width: 150px;border-right: 2px solid white;background-color: #31ad0b;">Beneficios</a>
+                        <a href="#costs" class="btn btn-primary text-white fw-bold button-hover" style="width: 150px;border-right: 2px solid white;background-color: #ff1313c7;">Costos</a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="roles-container">
+                <!-- Trabajadores Dependientes -->
+                <div class="role-box">
+                    <div class="role-content">
+                        <p style="font-size: 26px;"><strong>Pasos</strong></p>
+                        <div class="subcategory-container">
+                            <a href="categoria.html" class="subcategory-box" style="background-color: #2d59c1;" aria-label="Trabajador que emite boleta de honorarios ante el SII">
+                                <div class="subcategory-content">
+                                    <h4><strong>Paso 1:</strong> Escritura del contrato con el trabajador.</h4>
+                                </div>
+                            </a>
+                            <a href="plazofijo.html" class="subcategory-box" style="background-color: #2d59c1;" aria-label="Trabajador que no emite boleta de honorarios ante el SII">
+                                <div class="subcategory-content">
+                                    <h4><strong>Paso 2:</strong> Pago de cotizaciones previsionales, seguro laboral y SIS</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+                
+            <h2 class="section-title p-4">¿Cómo formalizar mi emprendimiento?</h2>
+            <!-- Rectángulos de los Roles -->
+            <div class="roles-container1">
+                <!-- Trabajadores Dependientes -->
+                <div class="role-box">
+                    <div class="role-content">
+                        <p style="font-size: 26px;"><strong>Formalizar mi emprendimiento</strong></p>
+                        <div class="subcategory-container">
+                            <a href="https://rutadelapyme.cl/" class="subcategory-box" style="background-color: #2d59c1;" aria-label="Trabajador que emite boleta de honorarios ante el SII">
+                                <div class="subcategory-content">
+                                    <h4>Ruta de la pyme</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        // menu
+        const menuToggle = document.querySelector('#menu-toggle');
+        const navMenu = document.querySelector('#nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

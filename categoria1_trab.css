@@ -275,13 +275,6 @@ nav a:hover {
 }
 
 /* Contenedor de los roles */
-.roles-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin: 0 auto;
-    width: 80%;
-}
 
 /* Estilos para cada rectángulo de rol */
 .role-box {
@@ -540,3 +533,9 @@ select {
     margin: 5px 0;
     font-size: 19px;
 }
+.button-hover {
+    transition: transform 0.3s ease; /* Transición suave */
+}
+.button-hover:hover {
+    transform: scale(1.05); /* Agranda el botón al pasar el mouse */
+} 
