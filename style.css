@@ -1,6 +1,6 @@
 
 body {
-    margin: 0;
+    margin-top: 40px;
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     display: flex;
@@ -22,7 +22,7 @@ header {
 }
 .content {
     min-height: 100vh;
-    padding-top: 30px;  /* Ajusta este valor según la altura de tu encabezado */
+    padding-top: 50px;  /* Ajusta este valor según la altura de tu encabezado */
     /* Si el encabezado tiene 10px de padding y cualquier otro valor de altura, 
        usa un valor mayor que la altura total del encabezado */
 }
@@ -500,18 +500,6 @@ select {
     color: #fff; /* Cambiar el color del texto */
 }
 
-.portada {
-    background-image: url('img/agri.jpg'); /* Asegúrate de tener la imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Ajusta la altura de la portada para que ocupe toda la pantalla menos el encabezado */
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white; /* Texto blanco para contraste */
-    padding: 20px; /* Añadir un poco de padding si es necesario */
-}
 
 .portada-texto h1 {
     font-size: 2.5rem;
@@ -614,12 +602,7 @@ select {
         padding: 10px 20px; /* Reducir el padding del header */
     }
 }
-.subcategory-container {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Espaciado entre opciones */
-}
+
 
 .subcategory-box {
     text-decoration: none;
@@ -642,11 +625,11 @@ select {
 }
 
 #estadisticas {
-    margin-top: -300px;
+    margin-top: 100px;
     height: 100vh;
     max-width: 1200px; /* Puedes ajustar este valor según tus necesidades */
     margin: 0 auto; /* Centra la sección en la página */
-    padding: 20px;
+    padding: 70px;
     background-color: #ffffff; /* Fondo opcional para resaltar la sección */
     border-radius: 12px;
 }

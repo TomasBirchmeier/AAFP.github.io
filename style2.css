@@ -2,28 +2,23 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-
+    padding-top: 130px; /
 }
 body {
     zoom: 70%; /* Reduce el zoom al 80% */
 }
-
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 60px;
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
-    position: relative;  
-    flex-wrap: nowrap;  
-}
-.content {
-    padding-top: 30px;  /* Ajusta este valor según la altura de tu encabezado */
-    /* Si el encabezado tiene 10px de padding y cualquier otro valor de altura, 
-       usa un valor mayor que la altura total del encabezado */
+    z-index: 1000;
 }
 
 .logo {
@@ -34,13 +29,9 @@ header {
     font-size: 1.8rem;
     font-weight: bold;
     color: #333;
-    margin-left: 10;
-    flex-wrap: nowrap;  /* Sin margen para que esté pegado al logo */
-}
-html, body {
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
+    margin-left: 10px;
+    flex: 1; /* Esto permite que el título ocupe el espacio disponible */
+    text-align: left; /* Asegura que el título no se desplace */
 }
 
 nav {
@@ -119,10 +110,10 @@ nav a {
     padding: 10px;
     display: block;
 }
+
 nav.active {
     background-color: rgba(240, 240, 240, 1); /* Tono gris leve */
 }
-
 nav a:hover {
     color: #007bff;
 }
@@ -132,7 +123,7 @@ nav a:hover {
     .menu-toggle {
         display: none; /* Ocultar el botón de menú hamburguesa en pantallas grandes */
     }
-    flex-direction: column;
+
     nav {
         display: flex; /* Mostrar menú por defecto en pantallas grandes */
     }
@@ -141,6 +132,7 @@ nav a:hover {
     text-align: center;
     margin-top: 50px;
 }
+
 .content h1 {
     text-align: center;
     font-size: 2.5rem;
@@ -168,28 +160,89 @@ nav a:hover {
     text-align: justify;
     line-height: 1.4;
 }
+html, body {
+    overflow-x: hidden;
+}
 
 /* Tamaño de fuente proporcional en pantallas grandes */
-@media (min-width: 1300px) {
+@media (min-width: 1101px) {
     .text-overlay {
-        font-size: 2vw; /* Tamaño adaptado al ancho del viewport */
+        font-size: 1.7vw; /* Tamaño adaptado al ancho del viewport */
     }
 }
 
 /* Ajustes para pantallas medianas */
-@media (min-width: 700px) and (max-width: 1299px) {
+@media (min-width: 501px) and (max-width: 1100px) {
     .text-overlay {
-        font-size: 2.7vw; /* Letras más grandes en tablets */
+        font-size: 3.4vw; /* Letras más grandes en tablets */
+    }
+    .content { 
+        transform: scale(0.75);
+        transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
+    }
+
+    /* Aplica el estilo fijo al header */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px; /* Ajusta el padding según lo necesites */
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        z-index: 1000;
+    }
+    /* Espacio extra en el body para que el contenido no se oculte debajo del header */
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
+    /* Añadir espacio en el body para que el contenido no se oculte debajo del header */
+    body {
+        padding-top: 120px; /* Asegura que el contenido no se quede bajo el header */
     }
 }
 
 /* Ajustes para pantallas pequeñas (teléfonos) */
-@media (max-width: 699px) {
+/* Media query para pantallas pequeñas */
+@media (max-width: 500px) {
+    /* Solo escala el contenido principal */
     .text-overlay {
-        font-size: 5vw; /* Aumenta el tamaño en teléfonos */
-        top: 10%; /* Ajusta la posición si es necesario */
+        font-size: 4vw; /* Letras más grandes en tablets */
+    }
+    .content { 
+        transform: scale(0.75);
+        transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
+    }
+
+    /* Aplica el estilo fijo al header */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px; /* Ajusta el padding según lo necesites */
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        z-index: 1000;
+    }
+    /* Espacio extra en el body para que el contenido no se oculte debajo del header */
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
+    /* Añadir espacio en el body para que el contenido no se oculte debajo del header */
+    body {
+        padding-top: 120px; /* Asegura que el contenido no se quede bajo el header */
     }
 }
+
 .slider-container {
     position: relative;
     width: 100%;
@@ -212,6 +265,7 @@ nav a:hover {
     height: 100%;
     object-fit: contain;
 }
+
 .slider-btn {
     position: absolute;
     top: 50%;
@@ -226,6 +280,7 @@ nav a:hover {
     z-index: 10;
     font-size: 18px;
 }
+
 .overlay-text {
     position: absolute;
     top: 50%;
@@ -249,29 +304,57 @@ nav a:hover {
 .slider-btn:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
-.how-to-start h2 {
-    color: #0073e6; /* Color azul solo para los h2 dentro de esta sección */
-}
-.how-to-start p {
-    text-align: left; /* Alineación a la izquierda solo en esta sección */
-}
+
 .circle-number {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    flex-shrink: 0; 
+    align-items: center;
+    border-radius: 50%; /* Esto asegura que sea un círculo */
+    background-color: #31ad0b; !important; /* Color azul primario */
+    color: white; /* Texto blanco */
+    flex-shrink: 0; /* Evita que el círculo cambie de tamaño */
 }
-/* Explicación de los cargos */
-.explanation {
-    margin-bottom: 20px;
-    font-size: 1.1em;
-    color: #555;
+.btn-primary {
+    background-color: #007bff; /* Cambiar color de fondo */
+    color: white; /* Cambiar color del texto */
+    border: none; /* Eliminar borde */
+}
+
+.btn-primary:hover {
+    background-color: #5e73dc; /* Cambiar color de fondo cuando pasa el mouse */
+}
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .roles-container {
+        grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    }
+
+    .role-box {
+        font-size: 1em; /* Reducir el tamaño de la fuente */
+        padding: 15px;
+    }
+
+    .portada-texto h1 {
+        font-size: 1.8rem; /* Reducir el tamaño del texto en la portada */
+    }
+
+    .content h1 {
+        font-size: 2rem; /* Reducir el tamaño del título */
+    }
+
+    .info-box {
+        width: 90%; /* Hacer que el cuadro de información ocupe un poco más de espacio */
+    }
 }
 
 /* Contenedor de los roles */
@@ -294,23 +377,23 @@ nav a:hover {
 
 /* Colores para cada rol */
 .role-box:nth-child(1) {
-    background-color: #6db1f9; /* Naranja */
+    background-color: #ff7f50; /* Naranja */
 }
 
 .role-box:nth-child(2) {
-    background-color: #6db1f9; /* Azul violeta */
+    background-color: #6a5acd; /* Azul violeta */
 }
 
 .role-box:nth-child(3) {
-    background-color: ##05b4c4; /* Verde */
+    background-color: #3cb371; /* Verde */
 }
 
 .role-box:nth-child(4) {
-    background-color: #05b4c4; /* Verde agua */
+    background-color: #20b2aa; /* Verde agua */
 }
 
 .role-box:nth-child(5) {
-    background-color: #05b4c4; /* Rojo tomate */
+    background-color: #ff6347; /* Rojo tomate */
 }
 
 .role-box:nth-child(6) {
@@ -401,26 +484,27 @@ select {
     border-radius: 10px;
 }
 
-.roles-section { /* Ocupa toda la pantalla */
+.roles-section {
+    height: 100vh; /* Ocupa toda la pantalla */
     padding: 20px;
     background-color: #ffffff; /* Color de fondo para diferenciar */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
 
 .roles-section h1 {
     margin-bottom: 20px;
     color: #333;
+    scroll-margin-top: 60px;
 }
 
 .roles-container {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     width: 80%;
-    justify-content: center;
 }
 
 
@@ -437,6 +521,25 @@ select {
     text-align: center;
     line-height: 1.6; /* Altura de línea */
 }
+#steps1:before {
+    content: "";
+    display: block;
+    height: 160px; /* Ajusta este valor al alto del header */
+    margin-top: -150px;
+}
+#benefits:before {
+    content: "";
+    display: block;
+    height: 160px; /* Ajusta este valor al alto del header */
+    margin-top: -150px;
+}
+#costs:before {
+    content: "";
+    display: block;
+    height: 160px; /* Ajusta este valor al alto del header */
+    margin-top: -150px;
+}
+
 
 /* Media Queries para hacer el diseño responsive */
 @media (max-width: 768px) {
@@ -468,10 +571,7 @@ select {
         font-size: 2rem; /* Reducir el tamaño del título */
         flex-direction: column;
     }
-    .content { 
-        transform: scale(0.75);
-        transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
-    }
+
     .info-box {
         width: 90%; /* Hacer que el cuadro de información ocupe un poco más de espacio */
     }
@@ -486,14 +586,6 @@ select {
     header {
         padding: 10px 20px; /* Reducir el padding del header */
     }
-    .content { 
-        transform: scale(0.75);
-        transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
-    }
-    .roles-container {
-        grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
-        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
-    }
 }
 @media (max-width: 400px) {
     .header-title {
@@ -504,14 +596,6 @@ select {
     }
     header {
         padding: 10px 20px; /* Reducir el padding del header */
-    }
-    .content { 
-        transform: scale(0.75);
-        transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
-    }
-    .roles-container {
-        grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
-        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
     }
 }
 .subcategory-container {
@@ -539,4 +623,117 @@ select {
 .subcategory-content p {
     margin: 5px 0;
     font-size: 19px;
+}
+.btn-custom-blue {
+    background-color: #0056b3; /* Azul personalizado */
+    color: white;
+    border: none;
+}
+
+.btn-custom-blue:hover {
+    background-color: #004494; /* Azul más oscuro al pasar el mouse */
+}
+.button-hover {
+    transition: transform 0.3s ease; /* Transición suave */
+}
+.button-hover:hover {
+    transform: scale(1.05); /* Agranda el botón al pasar el mouse */
+} 
+
+.result {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.result strong {
+    color: #ff1313c7;
+}
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background-color: #ff1313c7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #ff1313c7;
+}
+
+.footer {
+    background-color: #0a2342;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.logo1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    height: auto;
+}
+.video-container {
+    position: relative;
+    width: 600px;
+    cursor: pointer;
+}
+
+.video-container img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.video-container:hover img {
+    filter: brightness(70%);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.play-button::before {
+    content: "▶";
+    font-size: 40px;
+    color: #000;
+}
+
+.video-container:hover .play-button {
+    background-color: rgba(255, 255, 255, 1);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+iframe {
+    width: 100%;
+    height: 340px;
+    border-radius: 10px;
+    display: none;
+}
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Ajusta según sea necesario */
 }
