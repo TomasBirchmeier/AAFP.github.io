@@ -25,9 +25,8 @@ header {
     /* Si el encabezado tiene 10px de padding y cualquier otro valor de altura, 
        usa un valor mayor que la altura total del encabezado */
 }
-
 .logo {
-    height: 120px;
+    height: 120px;/* Ajusta este valor para moverlo más a la izquierda */
 }
 
 .header-title {
@@ -174,6 +173,10 @@ nav a:hover {
     .text-overlay {
         font-size: 2vw; /* Tamaño adaptado al ancho del viewport */
     }
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
 }
 
 /* Ajustes para pantallas medianas */
@@ -181,6 +184,10 @@ nav a:hover {
     .text-overlay {
         font-size: 2.7vw; /* Letras más grandes en tablets */
     }
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
 }
 
 /* Ajustes para pantallas pequeñas (teléfonos) */
@@ -189,6 +196,10 @@ nav a:hover {
         font-size: 5vw; /* Aumenta el tamaño en teléfonos */
         top: 10%; /* Ajusta la posición si es necesario */
     }
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
 }
 .slider-container {
     position: relative;
@@ -295,7 +306,7 @@ nav a:hover {
 }
 
 .role-box:nth-child(3) {
-    background-color: ##05b4c4; /* Verde */
+    background-color: #05b4c4; /* Verde */
 }
 
 .role-box:nth-child(4) {
@@ -432,7 +443,7 @@ select {
 }
 
 /* Media Queries para hacer el diseño responsive */
-@media (max-width: 768px) {
+@media (max-width: 4000px) {
     header {
         padding: 10px 20px;
     }
@@ -462,12 +473,16 @@ select {
         flex-direction: column;
     }
     .content { 
-        transform: scale(0.75);
+        transform: scale(0.8);
         transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
     }
     .info-box {
         width: 90%; /* Hacer que el cuadro de información ocupe un poco más de espacio */
     }
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
 }
 @media (max-width: 461px) {
     .header-title {
@@ -487,6 +502,10 @@ select {
         grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
         width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
     }
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
 }
 @media (max-width: 400px) {
     .header-title {
@@ -506,6 +525,10 @@ select {
         grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
         width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
     }
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
 }
 .subcategory-container {
     margin-top: 15px;
@@ -521,6 +544,7 @@ select {
     background-color: #fff; /* Sobrescrito por estilo inline */
     transition: background-color 0.3s, transform 0.3s;
     text-align: center;
+    justify-self: center;
 }
 
 .subcategory-box:hover {

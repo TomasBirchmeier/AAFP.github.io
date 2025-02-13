@@ -27,9 +27,8 @@ header {
 }
 
 .logo {
-    height: 120px;
+    height: 120px;/* Ajusta este valor para moverlo más a la izquierda */
 }
-
 .header-title {
     font-size: 1.8rem;
     font-weight: bold;
@@ -174,6 +173,10 @@ nav a:hover {
     .text-overlay {
         font-size: 2vw; /* Tamaño adaptado al ancho del viewport */
     }
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
 }
 
 /* Ajustes para pantallas medianas */
@@ -181,6 +184,10 @@ nav a:hover {
     .text-overlay {
         font-size: 2.7vw; /* Letras más grandes en tablets */
     }
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
 }
 
 /* Ajustes para pantallas pequeñas (teléfonos) */
@@ -189,6 +196,10 @@ nav a:hover {
         font-size: 5vw; /* Aumenta el tamaño en teléfonos */
         top: 10%; /* Ajusta la posición si es necesario */
     }
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
 }
 .slider-container {
     position: relative;
@@ -475,6 +486,7 @@ select {
     .info-box {
         width: 90%; /* Hacer que el cuadro de información ocupe un poco más de espacio */
     }
+
 }
 @media (max-width: 461px) {
     .header-title {
