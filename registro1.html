@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portada AFP</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style2.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/Formalízate.2.0.jpg" alt="Logo de la organización" class="logo">
+        </a>
+        <button class="menu-toggle" id="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <nav id="nav-menu">
+            <a href="#tipos-de-cargo">Categorías de Trabajo</a>
+            <a href="#beneficios">Beneficios</a>
+            <a href="estadisticas.html">Estadísticas</a>
+        </nav>
+    </header>
+    <main class="content">
+        <h1>¿Cómo registrar un contrato?</h1>
+        <div id="steps1" class="container my-5">
+            <ul class="list-unstyled">
+                <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
+                    <div class="d-flex align-items-start">
+                        <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
+     style="width: 40px; height: 40px; background-color: #2f64d5;">
+                            <strong>1</strong> <!-- Número en negrita dentro del círculo -->
+                        </div>
+                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                            <span>
+                                <strong>Registro del contrato:</strong><br> Para registrar un contrato, el empleador debe estar inscrito en el sistema de registro para empleadores.
+                                Si aún no está registrado, puede hacerlo a través del sitio web de trámites de la Dirección del Trabajo.
+                                Para conocer el paso a paso del proceso, haga clic en el enlace "¿Cómo registrarlo?" o vea el siguiente video.
+                            </span>
+                            <div class="text-start mt-3 button-hover">
+                                <a href="https://midt.dirtrab.cl/welcome" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="background-color: #2f64d5;" >
+                                    Ir al sitio de la dirección del trabajo
+                                </a>
+                            </div>
+                            <div class="text-start mt-3 button-hover">
+                                <a href="https://www.dt.gob.cl/portal/1626/w3-article-121013.html" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="background-color: #2f64d5;" >
+                                    ¿Cómo registrarlo?
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-wrapper">
+                        <div class="video-container" onclick="playVideo(this)" data-video="oZpY0DZgO5w">
+                            <img class="videoThumbnail" src="https://img.youtube.com/vi/oZpY0DZgO5w/maxresdefault.jpg" alt="Vista previa del video">
+                            <div id="playButton" class="play-button"></div>
+                            <iframe class="videoFrame" src="" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <script>
+            // Slider
+                let currentIndex = 0; // Índice de la imagen actual
+                const slides = document.querySelector('.slides');
+                const totalSlides = document.querySelectorAll('.slide').length;
+                const prevBtn = document.querySelector('.prev-btn');
+                const nextBtn = document.querySelector('.next-btn');
+                function showSlide(index) {
+                    slides.style.transform = `translateX(-${index * 100}%)`;
+                }
+    
+                function nextSlide() {
+                    currentIndex = (currentIndex + 1) % totalSlides; // Mueve al siguiente o vuelve al inicio
+                    showSlide(currentIndex);
+                }
+                function prevSlide() {
+                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Mueve al anterior o al final
+                    showSlide(currentIndex);
+                }
+    
+                // Botones de navegación manual
+                nextBtn.addEventListener('click', nextSlide);
+                prevBtn.addEventListener('click', prevSlide);
+    
+                // Desplazamiento automático
+                setInterval(nextSlide, 9000); // Cambiar cada 7 segundos
+                showSlide(currentIndex); // Mostrar la primera imagen
+                // menu
+                const menuToggle = document.querySelector('#menu-toggle');
+                const navMenu = document.querySelector('#nav-menu');
+    
+                menuToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    });
+                });
+                function calcularCotizaciones() {
+                    const sueldo = parseFloat(document.getElementById("sueldo").value);
+    
+                    if (isNaN(sueldo) || sueldo <= 0) {
+                        alert("Por favor, introduce un sueldo válido.");
+                        return;
+                    }
+    
+                    // Porcentajes de cotización
+                    const afp = 10; // AFP 10%
+                    const salud = 7; // Salud 7%
+                    const cesantia = 0.6; // Seguro de cesantía 0.6%
+                    
+                    // Cálculos
+                    const afpMonto = sueldo * (afp / 100);
+                    const saludMonto = sueldo * (salud / 100);
+                    const cesantiaMonto = sueldo * (cesantia / 100);
+                    const totalDeducciones = afpMonto + saludMonto + cesantiaMonto;
+                    const sueldoLiquido = sueldo - totalDeducciones;
+    
+                    // Mostrar resultados con formato chileno
+                    const resultadoDiv = document.getElementById("resultado");
+                    resultadoDiv.style.display = "block";
+                    resultadoDiv.innerHTML = `
+                        <p><strong>Sueldo bruto:</strong> $${sueldo.toLocaleString("es-CL")}</p>
+                        <p><strong>Cotización AFP (10%):</strong> $${afpMonto.toLocaleString("es-CL")}</p>
+                        <p><strong>Cotización Salud (7%):</strong> $${saludMonto.toLocaleString("es-CL")}</p>
+                        <p><strong>Seguro de Cesantía (0.6%):</strong> $${cesantiaMonto.toLocaleString("es-CL")}</p>
+                        <p><strong>Total deducciones:</strong> $${totalDeducciones.toLocaleString("es-CL")}</p>
+                        <p><strong>Sueldo líquido:</strong> $${sueldoLiquido.toLocaleString("es-CL")}</p>
+                    `;
+                }
+                function playVideo(container) {
+                    const videoFrame = container.querySelector(".videoFrame");
+                    const videoThumbnail = container.querySelector(".videoThumbnail");
+                    const playButton = container.querySelector(".play-button");
+                    const videoID = container.getAttribute("data-video");
+    
+                    // Asigna la URL con autoplay
+                    videoFrame.src = `https://www.youtube.com/embed/${videoID}?autoplay=1`;
+    
+                    // Oculta la miniatura y el botón
+                    videoThumbnail.style.display = "none";
+                    playButton.style.display = "none";
+    
+                    // Muestra el iframe
+                    videoFrame.style.display = "block";
+                }
+            </script>
+        
+    

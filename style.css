@@ -3,22 +3,24 @@ body {
     margin-top: 40px;
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
+    padding-top: 130px; /
 }
 body {
     zoom: 70%; /* Reduce el zoom al 80% */
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 60px;
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
-    position: relative;  
-    flex-wrap: nowrap;  
+    z-index: 1000;
 }
 .content {
     min-height: 100vh;
@@ -35,6 +37,7 @@ header {
     font-weight: bold;
     color: #333;
     margin-left: 10;
+    flex: 1; 
     flex-wrap: nowrap;  /* Sin margen para que esté pegado al logo */
 }
 html, body {
@@ -211,7 +214,7 @@ nav a:hover {
         font-size: 3vw; /* Tamaño adaptado al ancho del viewport */
     }
     .content { 
-        transform: scale(0.8);
+        transform: scale(0.75);
         transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
     }
     header {
@@ -603,7 +606,12 @@ select {
     }
 }
 
-
+.subcategory-container {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado entre opciones */
+}
 .subcategory-box {
     text-decoration: none;
     border-radius: 8px;
