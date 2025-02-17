@@ -11,27 +11,24 @@ body {
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 60px;
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
-    z-index: 1000;
+    position: relative;  
+    flex-wrap: nowrap;  
 }
 .content {
     padding-top: 30px;  /* Ajusta este valor según la altura de tu encabezado */
     /* Si el encabezado tiene 10px de padding y cualquier otro valor de altura, 
        usa un valor mayor que la altura total del encabezado */
 }
+
 .logo {
     height: 120px;/* Ajusta este valor para moverlo más a la izquierda */
 }
-
 .header-title {
     font-size: 1.8rem;
     font-weight: bold;
@@ -179,25 +176,6 @@ nav a:hover {
     #steps1, #benefits, #costs {
         scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
     }
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%; 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px; /* Ajusta el padding según lo necesites */
-        background-color: #ffffff;
-        border-bottom: 1px solid #e0e0e0;
-        z-index: 1000;
-    }
-    /* Espacio extra en el body para que el contenido no se oculte debajo del header */
-
-    /* Añadir espacio en el body para que el contenido no se oculte debajo del header */
-    body {
-        padding-top: 120px; /* Asegura que el contenido no se quede bajo el header */
-    }
 
 }
 
@@ -209,25 +187,6 @@ nav a:hover {
     #steps1, #benefits, #costs {
         scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
     }
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%; 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px; /* Ajusta el padding según lo necesites */
-        background-color: #ffffff;
-        border-bottom: 1px solid #e0e0e0;
-        z-index: 1000;
-    }
-    /* Espacio extra en el body para que el contenido no se oculte debajo del header */
-
-    /* Añadir espacio en el body para que el contenido no se oculte debajo del header */
-    body {
-        padding-top: 120px; /* Asegura que el contenido no se quede bajo el header */
-    }
 
 }
 
@@ -237,27 +196,8 @@ nav a:hover {
         font-size: 5vw; /* Aumenta el tamaño en teléfonos */
         top: 10%; /* Ajusta la posición si es necesario */
     }
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%; 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px; /* Ajusta el padding según lo necesites */
-        background-color: #ffffff;
-        border-bottom: 1px solid #e0e0e0;
-        z-index: 1000;
-    }
-    /* Espacio extra en el body para que el contenido no se oculte debajo del header */
     #steps1, #benefits, #costs {
         scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
-    }
-
-    /* Añadir espacio en el body para que el contenido no se oculte debajo del header */
-    body {
-        padding-top: 120px; /* Asegura que el contenido no se quede bajo el header */
     }
 
 }
@@ -346,6 +286,13 @@ nav a:hover {
 }
 
 /* Contenedor de los roles */
+.roles-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+    width: 80%;
+}
 
 /* Estilos para cada rectángulo de rol */
 .role-box {
@@ -362,11 +309,11 @@ nav a:hover {
 }
 
 .role-box:nth-child(2) {
-    background-color: #6db1f9; /* Azul violeta */
+    background-color: #eca058; /* Azul violeta */
 }
 
 .role-box:nth-child(3) {
-    background-color: #05b4c4; /* Verde */
+    background-color: #5dae20; /* Verde */
 }
 
 .role-box:nth-child(4) {
@@ -503,7 +450,7 @@ select {
 }
 
 /* Media Queries para hacer el diseño responsive */
-@media (max-width: 4000px) {
+@media (max-width: 768px) {
     header {
         padding: 10px 20px;
     }
@@ -533,14 +480,11 @@ select {
         flex-direction: column;
     }
     .content { 
-        transform: scale(0.8);
+        transform: scale(0.75);
         transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
     }
     .info-box {
         width: 90%; /* Hacer que el cuadro de información ocupe un poco más de espacio */
-    }
-    #steps1, #benefits, #costs {
-        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
     }
 
 }
@@ -562,10 +506,6 @@ select {
         grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
         width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
     }
-    #steps1, #benefits, #costs {
-        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
-    }
-
 }
 @media (max-width: 400px) {
     .header-title {
@@ -585,10 +525,6 @@ select {
         grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
         width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
     }
-    #steps1, #benefits, #costs {
-        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
-    }
-
 }
 .subcategory-container {
     margin-top: 15px;
@@ -604,7 +540,6 @@ select {
     background-color: #fff; /* Sobrescrito por estilo inline */
     transition: background-color 0.3s, transform 0.3s;
     text-align: center;
-    justify-self: center;
 }
 
 .subcategory-box:hover {
@@ -617,9 +552,3 @@ select {
     margin: 5px 0;
     font-size: 19px;
 }
-.button-hover {
-    transition: transform 0.3s ease; /* Transición suave */
-}
-.button-hover:hover {
-    transform: scale(1.05); /* Agranda el botón al pasar el mouse */
-} 
