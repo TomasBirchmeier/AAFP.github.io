@@ -35,56 +35,49 @@
         </nav>
     </header>
     <main class="content">
-        <h1>¿Cómo pagar cotizaciones?</h1>
-        <div id="steps1" class="container my-5">
+        <h1 style="color: #f70707;">Costos de contratar</h1>
+
+        <div id="benefits" class="container my-5">
+
+            <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
+                <div class="d-flex align-items-start">
+                    <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
+ style="width: 40px; height: 40px; background-color: #ff1313c7;">
+                        <strong>1</strong> <!-- Número en negrita dentro del círculo -->
+                    </div>
+                    <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                        <span>
+                            <strong>Realizar el trámite no tiene ningun costo</strong>
+                        </span>
+    
+                    </div>
+                </div>
+                
+            </li>
+            <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
+                <div class="d-flex align-items-start">
+                    <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
+ style="width: 40px; height: 40px; background-color: #ff1313c7;">
+                        <strong>2</strong> <!-- Número en negrita dentro del círculo -->
+                    </div>
+                    <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                        <span>
+                            <strong>La regularización del empleo implica un aumento de pago gracias a las cotizaciones, en el siguiente simulador puedes estimar su costo</strong>
+                        </span>
+    
+                    </div>
+                </div>
+                
+            </li>
             <ul class="list-unstyled">
-                <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
-                    <div class="d-flex align-items-start">
-                        <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
-     style="width: 40px; height: 40px; background-color: #2f64d5;">
-                            <strong>1</strong> <!-- Número en negrita dentro del círculo -->
-                        </div>
-                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
-                            <span>
-                                <strong>Crear cuenta en Previred:</strong><br> Si aun no tienes una cuenta en Previred, crea una y registra a tus trabajadores.
-                            </span>
-                            <div class="text-start mt-3 button-hover">
-                                <a href="https://www.previred.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="background-color: #2f64d5;" >
-                                    Ir al sitio de Previred
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="video-wrapper">
-                        <div class="video-container" onclick="playVideo(this)" data-video="aIax79S17DI">
-                            <img class="videoThumbnail" src="https://img.youtube.com/vi/aIax79S17DI/maxresdefault.jpg" alt="Vista previa del video">
-                            <div id="playButton" class="play-button"></div>
-                            <iframe class="videoFrame" src="" frameborder="0" allow="autoplay" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </li>
-                <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
-                    <div class="d-flex align-items-start">
-                        <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
-     style="width: 40px; height: 40px; background-color: #2f64d5;">
-                            <strong>2</strong> <!-- Número en negrita dentro del círculo -->
-                        </div>
-                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
-                            <span>
-                                <strong>Pagar:</strong><br> Puedes pagar todas las cotizaciones correspondientes directamente desde la página de Previred, en el siguiente video se encuentra el paso a paso;
-                            </span>
-                        </div>
-                    </div>
-                    <div class="video-wrapper">
-                        <div class="video-container" onclick="playVideo(this)" data-video="ZiisglnwZk4">
-                            <img class="videoThumbnail" src="https://img.youtube.com/vi/ZiisglnwZk4/maxresdefault.jpg" alt="Vista previa del video">
-                            <div id="playButton" class="play-button"></div>
-                            <iframe class="videoFrame" src="" frameborder="0" allow="autoplay" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+        <div class="container">
+            <h2>Simulador de Cotizaciones</h2>
+            <p>Introduce el sueldo bruto para calcular las cotizaciones (por ejemplo, para 800 mil ingresa 800000 sin puntos ni comas):</p>
+            <input type="number" id="sueldo" placeholder="Ingresa tu sueldo bruto" />
+            <button onclick="calcularCotizaciones()">Calcular</button>
+            <div id="resultado" class="result" style="display: none;"></div>
         </div>
+            
         <script>
             // Slider
                 let currentIndex = 0; // Índice de la imagen actual
