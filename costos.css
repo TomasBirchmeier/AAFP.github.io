@@ -11,24 +11,27 @@ body {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 60px;
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
-    position: relative;  
-    flex-wrap: nowrap;  
+    z-index: 1000;
 }
 .content {
     padding-top: 30px;  /* Ajusta este valor según la altura de tu encabezado */
     /* Si el encabezado tiene 10px de padding y cualquier otro valor de altura, 
        usa un valor mayor que la altura total del encabezado */
 }
-
 .logo {
     height: 120px;/* Ajusta este valor para moverlo más a la izquierda */
 }
+
 .header-title {
     font-size: 1.8rem;
     font-weight: bold;
@@ -176,22 +179,24 @@ nav a:hover {
     #steps1, #benefits, #costs {
         scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
     }
-    .header-title {
-        font-size: 0.5rem; /* Reducir tamaño del título si la pantalla es pequeña */
-        text-align: center; /* Centrar el título en pantallas pequeñas */
-        margin: 0; /* Eliminar el margen a la izquierda */
-        width: 100%; /* Asegurar que el título ocupe el ancho completo */
-    }
     header {
-        padding: 10px 20px; /* Reducir el padding del header */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px; /* Ajusta el padding según lo necesites */
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        z-index: 1000;
     }
-    .content { 
-        transform: scale(0.75);
-        transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
-    }
-    .roles-container {
-        grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
-        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    /* Espacio extra en el body para que el contenido no se oculte debajo del header */
+
+    /* Añadir espacio en el body para que el contenido no se oculte debajo del header */
+    body {
+        padding-top: 120px; /* Asegura que el contenido no se quede bajo el header */
     }
 
 }
@@ -204,22 +209,24 @@ nav a:hover {
     #steps1, #benefits, #costs {
         scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
     }
-    .header-title {
-        font-size: 0.5rem; /* Reducir tamaño del título si la pantalla es pequeña */
-        text-align: center; /* Centrar el título en pantallas pequeñas */
-        margin: 0; /* Eliminar el margen a la izquierda */
-        width: 100%; /* Asegurar que el título ocupe el ancho completo */
-    }
     header {
-        padding: 10px 20px; /* Reducir el padding del header */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px; /* Ajusta el padding según lo necesites */
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        z-index: 1000;
     }
-    .content { 
-        transform: scale(0.75);
-        transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
-    }
-    .roles-container {
-        grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
-        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    /* Espacio extra en el body para que el contenido no se oculte debajo del header */
+
+    /* Añadir espacio en el body para que el contenido no se oculte debajo del header */
+    body {
+        padding-top: 120px; /* Asegura que el contenido no se quede bajo el header */
     }
 
 }
@@ -230,25 +237,27 @@ nav a:hover {
         font-size: 5vw; /* Aumenta el tamaño en teléfonos */
         top: 10%; /* Ajusta la posición si es necesario */
     }
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px; /* Ajusta el padding según lo necesites */
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        z-index: 1000;
+    }
+    /* Espacio extra en el body para que el contenido no se oculte debajo del header */
     #steps1, #benefits, #costs {
         scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
     }
-    .header-title {
-        font-size: 0.5rem; /* Reducir tamaño del título si la pantalla es pequeña */
-        text-align: center; /* Centrar el título en pantallas pequeñas */
-        margin: 0; /* Eliminar el margen a la izquierda */
-        width: 100%; /* Asegurar que el título ocupe el ancho completo */
-    }
-    header {
-        padding: 10px 20px; /* Reducir el padding del header */
-    }
-    .content { 
-        transform: scale(0.75);
-        transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
-    }
-    .roles-container {
-        grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
-        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+
+    /* Añadir espacio en el body para que el contenido no se oculte debajo del header */
+    body {
+        padding-top: 120px; /* Asegura que el contenido no se quede bajo el header */
     }
 
 }
@@ -337,13 +346,6 @@ nav a:hover {
 }
 
 /* Contenedor de los roles */
-.roles-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin: 0 auto;
-    width: 80%;
-}
 
 /* Estilos para cada rectángulo de rol */
 .role-box {
@@ -364,7 +366,7 @@ nav a:hover {
 }
 
 .role-box:nth-child(3) {
-    background-color: ##05b4c4; /* Verde */
+    background-color: #05b4c4; /* Verde */
 }
 
 .role-box:nth-child(4) {
@@ -501,7 +503,7 @@ select {
 }
 
 /* Media Queries para hacer el diseño responsive */
-@media (max-width: 768px) {
+@media (max-width: 4000px) {
     header {
         padding: 10px 20px;
     }
@@ -531,11 +533,14 @@ select {
         flex-direction: column;
     }
     .content { 
-        transform: scale(0.75);
+        transform: scale(0.85);
         transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
     }
     .info-box {
         width: 90%; /* Hacer que el cuadro de información ocupe un poco más de espacio */
+    }
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
     }
 
 }
@@ -557,6 +562,10 @@ select {
         grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
         width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
     }
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
 }
 @media (max-width: 400px) {
     .header-title {
@@ -576,6 +585,10 @@ select {
         grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
         width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
     }
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
 }
 .subcategory-container {
     margin-top: 15px;
@@ -591,6 +604,7 @@ select {
     background-color: #fff; /* Sobrescrito por estilo inline */
     transition: background-color 0.3s, transform 0.3s;
     text-align: center;
+    justify-self: center;
 }
 
 .subcategory-box:hover {
@@ -603,106 +617,9 @@ select {
     margin: 5px 0;
     font-size: 19px;
 }
-.footer {
-    background-color: #044bff;  /* Fondo celeste */
-    padding: 20px 0;
-    color: white;
-    width: 100%;
-    height: 190px;
-    position: relative;
-
+.button-hover {
+    transition: transform 0.3s ease; /* Transición suave */
 }
-
-/* Contenedor principal del footer */
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Logo en la izquierda */
-:root {
-    --footer-padding: 30px; /* Ajusta este valor para modificar los espacios */
-}
-.footer-logo {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    left: var(--footer-padding); 
-    transform: translateY(-50%);
-}
-
-.footer-logo img {
-    height: 80px;
-    object-fit: contain;
-    display: block;
-}
-.footer-logo img {
-    height: 70px;
-    transition: transform 0.3s;
-}
-
-/* Efecto al pasar el mouse */
-.footer-logo img:hover {
-    transform: scale(1.1);
-}
-
-.footer-go img {
-    height: 40px;
-    transition: transform 0.3s;
-}
-
-/* Estilos de las imágenes */
-.footer-images {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    display: flex;
-    gap: 15px;
-    top: 50%;
-    right: var(--footer-padding); 
-}
-
-.footer-images img {
-    height: 40px;
-    transition: transform 0.3s;
-}
-
-/* Efecto al pasar el mouse */
-.footer-images img:hover {
-    transform: scale(1.1);
-}
-/* Responsive: en pantallas pequeñas, apila elementos */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    /* Centrar el logo en pantallas pequeñas */
-    .footer-logo {
-        position: static; /* Evita que se salga del flujo normal */
-        transform: none; /* Elimina el ajuste de altura */
-        margin-bottom: 15px;
-    }
-    
-    .footer-logo img {
-        height: 60px; /* Ajusta el tamaño en pantallas pequeñas */
-    }
-
-    /* Centrar las imágenes en pantallas pequeñas */
-    .footer-images {
-        position: static;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px; /* Espacio entre imágenes */
-    }
-
-    .footer-images img {
-        height: 30px; /* Ajusta el tamaño en móviles */
-    }
-}
+.button-hover:hover {
+    transform: scale(1.05); /* Agranda el botón al pasar el mouse */
+} 

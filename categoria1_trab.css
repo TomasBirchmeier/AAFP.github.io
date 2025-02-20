@@ -533,7 +533,7 @@ select {
         flex-direction: column;
     }
     .content { 
-        transform: scale(0.8);
+        transform: scale(0.75);
         transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
     }
     .info-box {
@@ -623,3 +623,109 @@ select {
 .button-hover:hover {
     transform: scale(1.05); /* Agranda el botón al pasar el mouse */
 } 
+.footer {
+    background-color: #044bff;  /* Fondo celeste */
+    padding: 20px 0;
+    color: white;
+    width: 100%;
+    height: 190px;
+    position: relative;
+
+}
+
+/* Contenedor principal del footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo en la izquierda */
+:root {
+    --footer-padding: 30px; /* Ajusta este valor para modificar los espacios */
+}
+.footer-logo {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    left: var(--footer-padding); 
+    transform: translateY(-50%);
+}
+
+.footer-logo img {
+    height: 80px;
+    object-fit: contain;
+    display: block;
+}
+.footer-logo img {
+    height: 70px;
+    transition: transform 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+.footer-logo img:hover {
+    transform: scale(1.1);
+}
+
+.footer-go img {
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+/* Estilos de las imágenes */
+.footer-images {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 15px;
+    top: 50%;
+    right: var(--footer-padding); 
+}
+
+.footer-images img {
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+.footer-images img:hover {
+    transform: scale(1.1);
+}
+/* Responsive: en pantallas pequeñas, apila elementos */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Centrar el logo en pantallas pequeñas */
+    .footer-logo {
+        position: static; /* Evita que se salga del flujo normal */
+        transform: none; /* Elimina el ajuste de altura */
+        margin-bottom: 15px;
+    }
+    
+    .footer-logo img {
+        height: 60px; /* Ajusta el tamaño en pantallas pequeñas */
+    }
+
+    /* Centrar las imágenes en pantallas pequeñas */
+    .footer-images {
+        position: static;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px; /* Espacio entre imágenes */
+    }
+
+    .footer-images img {
+        height: 30px; /* Ajusta el tamaño en móviles */
+    }
+}
+.img-modelo {
+    height: 1000px; /* Ajusta el tamaño según lo necesites */
+}

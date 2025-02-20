@@ -20,7 +20,7 @@
         </button>
         <nav id="nav-menu">
             <a href="empleadorpasos.html">Portal Empleador</a>
-            <a href="trabajadorpasos.html">Portal Trabajador</a>
+            <a href="categoria2.html">Portal Trabajador</a>
             <a href="simulador2.html">Simulador de Sueldo</a>
             <a href="beneficios.html">Beneficios</a>
             <a href="estadisticas.html">Estadísticas</a>
@@ -200,6 +200,8 @@ Puedes encontrar los pasos detallados para crearla en el sitio web de domestikco
                             <strong>Pago de Licencias:</strong><br>Al cotizar regularmente en una AFP, tendrás derecho a pago de licencia medica en caso de enfermedad o accidente.
                         </span>
                     </div>
+                    <!-- Botón -->
+                   
                 </li>
                 <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
                     <div class="d-flex align-items-start">
@@ -213,6 +215,7 @@ Puedes encontrar los pasos detallados para crearla en el sitio web de domestikco
                     
                         </div>
                     </div>
+                    
                 </li>
                 <li class="d-flex align-items-center mb-3 p-3 bg-light rounded">
                     <div class="d-flex align-items-start">
@@ -268,8 +271,10 @@ Puedes encontrar los pasos detallados para crearla en el sitio web de domestikco
                         <span>
                             <strong>Realizar el trámite no tiene ningun costo</strong>
                         </span>
+    
                     </div>
                 </div>
+                
             </li>
             <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
                 <div class="d-flex align-items-start">
@@ -281,11 +286,22 @@ Puedes encontrar los pasos detallados para crearla en el sitio web de domestikco
                         <span>
                             <strong>La regularización del empleo implica un aumento de pago gracias a las cotizaciones, en el siguiente simulador puedes estimar su costo</strong>
                         </span>
+    
                     </div>
                 </div>
+                
             </li>
+            <ul class="list-unstyled">
+        <div class="container">
+            <h2>Simulador de Cotizaciones</h2>
+            <p>Introduce el sueldo bruto para calcular las cotizaciones (por ejemplo, para 800 mil ingresa 800000 sin puntos ni comas):</p>
+            <input type="number" id="sueldo" placeholder="Ingresa tu sueldo bruto" />
+            <button onclick="calcularCotizaciones()">Calcular</button>
+            <div id="resultado" class="result" style="display: none;"></div>
         </div>
-        <div id="questions" class="container my-5 p-3 rounded">
+        <!-- Sección de pasos -->
+        
+        <div id="questions" class="container my-5 p-3 rounded" style=" padding-top: 30px;padding-bottom: 30px;">
             <h3 class="text-center  text-dark fw-bold mb- ">Preguntas Frecuentes</h3>
             <ul class="list-unstyled">
                 <li class="d-flex flex-column mb-3 p-3 rounded" style="background-color: #fdf2b4;">
@@ -424,7 +440,49 @@ En otras palabras no podrá retirar los fondos en la AFP respectiva, si no acred
 
             menuToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
-            })
+            });
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                });
+            });
+            function calcularCotizaciones() {
+                const sueldo = parseFloat(document.getElementById("sueldo").value);
+
+                if (isNaN(sueldo) || sueldo <= 0) {
+                    alert("Por favor, introduce un sueldo válido.");
+                    return;
+                }
+
+                // Porcentajes de cotización
+                const afp = 10; // AFP 10%
+                const salud = 7; // Salud 7%
+                const cesantia = 0.6; // Seguro de cesantía 0.6%
+                
+                // Cálculos
+                const afpMonto = sueldo * (afp / 100);
+                const saludMonto = sueldo * (salud / 100);
+                const cesantiaMonto = sueldo * (cesantia / 100);
+                const totalDeducciones = afpMonto + saludMonto + cesantiaMonto;
+                const sueldoLiquido = sueldo - totalDeducciones;
+
+                // Mostrar resultados con formato chileno
+                const resultadoDiv = document.getElementById("resultado");
+                resultadoDiv.style.display = "block";
+                resultadoDiv.innerHTML = `
+                    <p><strong>Sueldo bruto:</strong> $${sueldo.toLocaleString("es-CL")}</p>
+                    <p><strong>Cotización AFP (10%):</strong> $${afpMonto.toLocaleString("es-CL")}</p>
+                    <p><strong>Cotización Salud (7%):</strong> $${saludMonto.toLocaleString("es-CL")}</p>
+                    <p><strong>Seguro de Cesantía (0.6%):</strong> $${cesantiaMonto.toLocaleString("es-CL")}</p>
+                    <p><strong>Total deducciones:</strong> $${totalDeducciones.toLocaleString("es-CL")}</p>
+                    <p><strong>Sueldo líquido:</strong> $${sueldoLiquido.toLocaleString("es-CL")}</p>
+                `;
+            }
             function playVideo(container) {
                 const videoFrame = container.querySelector(".videoFrame");
                 const videoThumbnail = container.querySelector(".videoThumbnail");
@@ -443,36 +501,6 @@ En otras palabras no podrá retirar los fondos en la AFP respectiva, si no acred
             }
         </script>
     </main>
-    <footer class="footer">
-        <div class="footer-container">
-            <!-- Logo a la izquierda -->
-            <div class="footer-logo">
-                <a href="https://www.aafp.cl" target="_blank">
-                    <img src="img/LogoNewAAFP-White (1).svg" alt="Logo AAFP" />
-                </a>
-            </div>
-            
-            <!-- Imágenes a la derecha con enlaces -->
-            <div class="footer-images">
-                <a href="https://www.afpcapital.cl/" target="_blank">
-                    <img src="img/capital.svg" alt="Capital" />
-                </a>
-                <a href="https://www6.cuprum.cl/" target="_blank">
-                    <img src="img/cuprum.svg" alt="Cuprum" />
-                </a>
-                <a href="https://www.afphabitat.cl" target="_blank">
-                    <img src="img/habitat.svg" alt="Habitat" />
-                </a>
-                <a href="https://www.provida.cl" target="_blank">
-                    <img src="img/FooterProvida.svg" alt="Provida" />
-                </a>
-                <a href="https://nueva.afpmodelo.cl/afiliados" target="_blank">
-                    <img src="img/modelo.svg" alt="Modelo" />
-                </a>
-            </div>
-        </div>
-    </footer>
 </body>
-
 </html>
        

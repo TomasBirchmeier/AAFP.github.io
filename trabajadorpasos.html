@@ -30,7 +30,7 @@
         </button>
         <nav id="nav-menu">
             <a href="empleadorpasos.html">Portal Empleador</a>
-            <a href="trabajadorpasos.html">Portal Trabajador</a>
+            <a href="categoria2.html">Portal Trabajador</a>
             <a href="simulador2.html">Simulador de Sueldo</a>
             <a href="beneficios.html">Beneficios</a>
             <a href="estadisticas.html">Estadísticas</a>
@@ -39,36 +39,66 @@
     
 
     <main class="content">
-        <h1 style="font-size: 48px;">Portal de Información para empleadores</h1>
+        <h1 style="font-size: 48px;">Portal de Información para Trabajadores</h1>
         <section class="roles-section" id="roles-section">
-            <h2 class="section-title" style="text-align: left;"><strong>¿Cómo realizar una contratación?</strong></h2>
+            <h2 class="section-title" style="text-align: left;"><strong>Selecciona tipo de trabajador</strong></h2>
             <!-- Rectángulos de los Roles -->
             <div class="roles-container">
                 <!-- Trabajadores Dependientes -->
                 <div class="role-box" >
                     <div class="role-content">
-                        <p style="font-size: 35px;text-align: left;"><strong>Pasos</strong></p>
+                        <p style="font-size: 35px;text-align: left;"><strong>Trabajadores dependientes:</strong> </p>
+                        <p style="font-size: 20px;text-align: left;">Trabajador que presta sus servicios a una empresa o empleador bajo un contrato laboral, recibiendo remuneración a cambio de su trabajo.</p>
                         <div class="subcategory-container">
                             
-                            <a href="tiposcontrato.html" class="subcategory-box" style="background-color: #2d59c1; ;" aria-label="Trabajador que emite boleta de honorarios ante el SII">
+                            <a href="trabajadores-sector-privado.html" class="subcategory-box" style="background-color: #2d59c1; ;" aria-label="Trabajador que emite boleta de honorarios ante el SII">
                                 <div class="subcategory-content" style="text-align: left;">
-                                    <h4><strong>Paso 1:</strong> Escritura del contrato con el trabajador.</h4>
+                                    <h4><strong>Trabajadores del sector privado</strong></h4>
+                                </div>
+                            </a>
+                            <a href="personal-servicio-domestico.html" class="subcategory-box" style="background-color: #2d59c1;" aria-label="Trabajador que no emite boleta de honorarios ante el SII">
+                                <div class="subcategory-content"style="text-align: left;">
+                                    <h4><strong>Trabajadoras de Casa Particular</strong></h4>
                                 </div>
                             </a>
                             <a href="registro1.html" class="subcategory-box" style="background-color: #2d59c1;" aria-label="Trabajador que no emite boleta de honorarios ante el SII">
                                 <div class="subcategory-content"style="text-align: left;">
-                                    <h4><strong>Paso 2:</strong> Registro del contrato en la dirección del trabajo</h4>
+                                    <h4><strong>Trabajadores con doble empleo:</strong> Trabajadores que tienen un sueldo como dependiente y adicionalmente tienen ingresos por emision de boleta de honorario por otros labores<h4>
                                 </div>
                             </a>
-                            <a href="pagocotizaciones.html" class="subcategory-box" style="background-color: #2d59c1;" aria-label="Trabajador que no emite boleta de honorarios ante el SII">
+                            <a href="trabajadores-agricola.html" class="subcategory-box" style="background-color: #2d59c1;" aria-label="Trabajador que no emite boleta de honorarios ante el SII">
                                 <div class="subcategory-content"style="text-align: left;">
-                                    <h4><strong>Paso 3:</strong> Pago de cotizaciones previsionales, seguro cesantía, seguro de accidente, seguro de invalidez y sobrevivencia</h4>
+                                    <h4><strong>Trabajadores del sector agrícola:</strong><h4>
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
-            </div><div class="roles-container" >
+            </div>
+            <div class="roles-container">
+                <!-- Trabajadores Dependientes -->
+                <div class="role-box" style="background-color: #f5af2c;" onmouseover="this.style.backgroundColor='#FF8C00';" onmouseout="this.style.backgroundColor='#FFA500';">
+                    <div class="role-content">
+                        <p style="font-size: 35px; text-align: left;"><strong>Trabajadores por Cuenta Propia</strong></p>
+                        <p style="font-size: 20px;text-align: left;">Trabajador que presta servicios de forma autónoma, ya sea emitiendo boletas de honorarios o no.</p>
+                        <div class="subcategory-container">
+                            <a href="tcp.emito.html" class="subcategory-box" style="background-color: #ef8c03;" aria-label="Trabajador que emite boleta de honorarios ante el SII">
+                                <div class="subcategory-content" style="text-align: left;">
+                                    <h4><strong>Trabajador que emite boleta de honorarios</strong></h4>
+                                </div>
+                            </a>
+                            <a href="tcp.noemito.html" class="subcategory-box" style="background-color: #ef8c03;" aria-label="Trabajador que no emite boleta de honorarios ante el SII">
+                                <div class="subcategory-content" style="text-align: left;">
+                                    <h4><strong>Trabajador que no emite boleta de honorarios</strong></h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="section-title p-3" style="text-align: center;"><strong>¿Cuáles son los beneficios de estar formal?</strong></h2>
+            <div class="roles-container" >
                 <!-- Trabajadores Dependientes -->
                 <div class="role-box" style="background-color: #6def45;" onmouseover="this.style.backgroundColor='#5ac836';" onmouseout="this.style.backgroundColor='#6def45';">
                     <div class="role-content">
@@ -83,6 +113,7 @@
                     </div>
                 </div>
             </div>
+            <h2 class="section-title p-3" style="text-align: center;"><strong>¿Cuáles son los costos de estar formal?</strong></h2>
             <div class="roles-container">
                 <!-- Trabajadores Dependientes -->
                 <div class="role-box" style="background-color: #ef6e6e;" onmouseover="this.style.backgroundColor='#d64f4f';" 
@@ -99,27 +130,7 @@
                     </div>
                 </div>
             </div>
-             
-            <h2 class="section-title p-4"><strong>¿Cómo formalizar mi emprendimiento?</strong></h2>
-            <!-- Rectángulos de los Roles -->
-            <div class="roles-container">
-                <!-- Trabajadores Dependientes -->
-                <div class="role-box" style="background-color: #FFD700;" 
-                    onmouseover="this.style.backgroundColor='#E6C200';" 
-                    onmouseout="this.style.backgroundColor='#FFD700';">
-                    <div class="role-content">
-                        <p style="font-size: 35px;text-align: left;"><strong>Formalizar emprendimiento</strong></p>
-                        <div class="subcategory-container">
-                            <a href="https://www.rutadelapyme.cl/" class="subcategory-box" style="background-color: #fcc102;" 
-                            aria-label="Trabajador que emite boleta de honorarios ante el SII">
-                                <div class="subcategory-content"style="text-align: left;">
-                                    <h4><strong>Descubre cómo hacerlo en ruta de la pyme</strong></h4>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <div id="questions" class="container my-5 p-3 rounded" style="padding-top: 30px; padding-bottom: 30px; transform: scale(1.15); transform-origin: top;">
                 <h3 class="text-center  text-dark fw-bold mb- ">Preguntas Frecuentes</h3>
                 <ul class="list-unstyled">
@@ -247,5 +258,6 @@
             </div>
         </div>
     </footer>
+    
 </body>
 </html>

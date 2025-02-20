@@ -640,33 +640,7 @@ select {
     transform: scale(1.05); /* Agranda el botón al pasar el mouse */
 } 
 
-.result {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-.result strong {
-    color: #ff1313c7;
-}
-input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-button {
-    background-color: #ff1313c7;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #ff1313c7;
-}
+
 
 .footer {
     background-color: #0a2342;
@@ -684,58 +658,159 @@ button:hover {
     width: 60px;
     height: auto;
 }
-
-.video-preview {
-    width: 560px;
-    cursor: pointer;
+.video-container {
     position: relative;
-    display: inline-block;
+    width: 600px;
+    cursor: pointer;
 }
-.video-preview img {
+
+.video-container img {
     width: 100%;
     border-radius: 10px;
+    transition: 0.3s ease-in-out;
 }
-iframe {
-    width: 100%;
-    height: 315px;
-    border: none;
-    display: none;
+
+.video-container:hover img {
+    filter: brightness(70%);
 }
-.thumbnail {
-    width: 100%;
-    border-radius: 10px;
-}
+
 .play-button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
     width: 80px;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.play-button::after {
-    content: '\25B6';
-    font-size: 40px;
-    color: white;
-}
-#estadisticas {
-    margin-top: 2px;
-    height: 100vh;
-    max-width: 1200px; /* Puedes ajustar este valor según tus necesidades */
-    margin: 0 auto; /* Centra la sección en la página */
-    padding: 120px;
-    background-color: #ffffff; /* Fondo opcional para resaltar la sección */
-    border-radius: 12px;
+    transition: 0.3s;
 }
 
-/* Asegura que el contenido del gráfico no desborde */
-.flourish-embed {
+.play-button::before {
+    content: "▶";
+    font-size: 40px;
+    color: #000;
+}
+
+.video-container:hover .play-button {
+    background-color: rgba(255, 255, 255, 1);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+iframe {
     width: 100%;
-    max-width: 100%;
-    overflow: hidden;
+    height: 340px;
+    border-radius: 10px;
+    display: none;
+}
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Ajusta según sea necesario */
+}
+.footer {
+    background-color: #044bff;  /* Fondo celeste */
+    padding: 20px 0;
+    color: white;
+    width: 100%;
+    height: 190px;
+    position: relative;
+
+}
+
+/* Contenedor principal del footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo en la izquierda */
+:root {
+    --footer-padding: 30px; /* Ajusta este valor para modificar los espacios */
+}
+.footer-logo {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    left: var(--footer-padding); 
+    transform: translateY(-50%);
+}
+
+.footer-logo img {
+    height: 80px;
+    object-fit: contain;
+    display: block;
+}
+.footer-logo img {
+    height: 70px;
+    transition: transform 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+.footer-logo img:hover {
+    transform: scale(1.1);
+}
+
+.footer-go img {
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+/* Estilos de las imágenes */
+.footer-images {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 15px;
+    top: 50%;
+    right: var(--footer-padding); 
+}
+
+.footer-images img {
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+.footer-images img:hover {
+    transform: scale(1.1);
+}
+/* Responsive: en pantallas pequeñas, apila elementos */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Centrar el logo en pantallas pequeñas */
+    .footer-logo {
+        position: static; /* Evita que se salga del flujo normal */
+        transform: none; /* Elimina el ajuste de altura */
+        margin-bottom: 15px;
+    }
+    
+    .footer-logo img {
+        height: 60px; /* Ajusta el tamaño en pantallas pequeñas */
+    }
+
+    /* Centrar las imágenes en pantallas pequeñas */
+    .footer-images {
+        position: static;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px; /* Espacio entre imágenes */
+    }
+
+    .footer-images img {
+        height: 30px; /* Ajusta el tamaño en móviles */
+    }
 }
