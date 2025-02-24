@@ -24,7 +24,7 @@ header {
     z-index: 1000;
 }
 .content {
-    padding-top: 30px;  /* Ajusta este valor según la altura de tu encabezado */
+    padding-top: 140px;  /* Ajusta este valor según la altura de tu encabezado */
     /* Si el encabezado tiene 10px de padding y cualquier otro valor de altura, 
        usa un valor mayor que la altura total del encabezado */
 }

@@ -167,9 +167,9 @@ nav a:hover {
 
 
 /* Tamaño de fuente proporcional en pantallas grandes */
-@media (min-width: 1101px) {
+@media (min-width: 1301px) {
     .text-overlay {
-        font-size: 1.7vw; /* Tamaño adaptado al ancho del viewport */
+        font-size: 1.5vw; /* Tamaño adaptado al ancho del viewport */
     }
     header {
         position: fixed;
@@ -184,6 +184,7 @@ nav a:hover {
         border-bottom: 1px solid #e0e0e0;
         z-index: 1000;
     }
+    /* Espacio extra en el body para que el contenido no se oculte debajo del header */
     #steps1, #benefits, #costs {
         scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
     }
@@ -194,7 +195,34 @@ nav a:hover {
     }
   
 }
+@media (min-width: 1101px) and (max-width: 1300px) {
+    .text-overlay {
+        font-size: 1.9vw; /* Tamaño adaptado al ancho del viewport */
+    }
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px; /* Ajusta el padding según lo necesites */
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        z-index: 1000;
+    }
+    /* Espacio extra en el body para que el contenido no se oculte debajo del header */
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
 
+    /* Añadir espacio en el body para que el contenido no se oculte debajo del header */
+    body {
+        padding-top: 120px; /* Asegura que el contenido no se quede bajo el header */
+    }
+  
+}
 /* Ajustes para pantallas medianas */
 @media (min-width: 501px) and (max-width: 1100px) {
     .text-overlay {

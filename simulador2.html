@@ -28,7 +28,7 @@
         </nav>
     </header>
     <main class="content">
-        <h1 style="color: white;">Simulador de Sueldo</h1>
+        <h1 style="color: rgb(0, 0, 0);">Simulador de Sueldo</h1>
         <div class="container">
        
             <label for="salary">Sueldo Base:</label>
@@ -56,10 +56,8 @@
             <p class="result" id="netSalary">Sueldo Líquido: $0</p>
             <div class="breakdown" id="breakdown"></div>
 
-            <button onclick="generatePDF()">Generar Reporte</button>
-
+            <button1 onclick="generatePDF()">Descargar Detalle</button1>
         </div>
-    
         <script>
             function calculateSalary() {
                 let salary = parseFloat(document.getElementById("salary").value) || 0;
@@ -72,7 +70,7 @@
                 let afp_comision = salary * 0.01;
                 let health = salary * 0.07;
                 let cesantiaWorker = contractType === "Indefinido" ? salary * 0.006 : 0;
-                let cesantiaEmployer = contractType === "Ondefinido" ? salary * 0.024 : salary * 0.03;
+                let cesantiaEmployer = contractType === "Indefinido" ? salary * 0.024 : salary * 0.03;
                 let mutualSecurity = salary * 0.009;
                 let sis = salary * 0.0138;
                 let fondo_indem = householdWorker === "Si" ? salary * 0.011 : 0; // Solo si es trabajador/a de casa particular
@@ -113,22 +111,22 @@
             }    
             const menuToggle = document.querySelector('#menu-toggle');
             const navMenu = document.querySelector('#nav-menu');
-
+    
             menuToggle.addEventListener('click', () => {
                 navMenu.classList.toggle('active');
             });
-
+    
     
             function generatePDF() {
                 const { jsPDF } = window.jspdf;
                 const doc = new jsPDF();
-
+    
                 let salary = parseFloat(document.getElementById("salary").value) || 0;
                 let contractType = document.getElementById("contractType").value;
                 let householdWorker = document.getElementById("householdWorker").value;
                 let transport = parseFloat(document.getElementById("transport").value) || 0;
                 let lunch = parseFloat(document.getElementById("lunch").value) || 0;
-
+    
                 let afp = salary * 0.1;
                 let afp_comision = salary * 0.01;
                 let health = salary * 0.07;
@@ -137,37 +135,37 @@
                 let mutualSecurity = salary * 0.009;
                 let sis = salary * 0.0138;
                 let fondo_indem = householdWorker === "Si" ? salary * 0.011 : 0;
-
+    
                 let totalWorkerDeductions = afp + health + cesantiaWorker + afp_comision;
                 let totalEmployerContributions = cesantiaEmployer + mutualSecurity + sis + fondo_indem;
                 let netSalary = salary - totalWorkerDeductions + transport + lunch;
-
+    
                 // Configuración del documento
                 doc.setFont("helvetica", "bold");
                 doc.setFontSize(18);
-                doc.text("Reporte de Sueldo", 105, 20, null, null, "center");
-
+                doc.text("Detalle de Cotizaciones", 105, 20, null, null, "center");
+    
                 doc.setFontSize(10);
                 doc.setFont("helvetica", "normal");
                 doc.text("Fecha: " + new Date().toLocaleDateString(), 14, 30);
-
+    
                 doc.setLineWidth(0.5);
                 doc.line(14, 35, 196, 35); // Línea divisoria
-
+    
                 doc.setFontSize(12);
                 doc.setFont("helvetica", "bold");
                 doc.text("Simulador del Sueldo", 14, 45);
-
+    
                 doc.setFontSize(10);
                 doc.setFont("helvetica", "normal");
                 doc.text("Sueldo Base: $" + salary.toLocaleString("es-CL"), 14, 55);
                 doc.text("Tipo de Contrato: " + contractType, 14, 65);
-
+    
                 // Resumen de Cálculo
                 doc.setFontSize(12);
                 doc.setFont("helvetica", "bold");
                 doc.text("Resumen de Cálculo", 14, 80);
-
+    
                 const resumenCalculo = [
                     ["Concepto", "Monto"],
                     ["Sueldo Bruto", `$${salary.toLocaleString("es-CL")}`],
@@ -176,7 +174,7 @@
                     ["Colación", `+$${lunch.toLocaleString("es-CL")}`],
                     ["Sueldo Líquido", `$${netSalary.toLocaleString("es-CL")}`]
                 ];
-
+    
                 doc.autoTable({
                     startY: 85,
                     head: [resumenCalculo[0]],
@@ -186,12 +184,12 @@
                     headStyles: { fillColor: [41, 128, 185], textColor: 255, fontStyle: "bold" },
                     columnStyles: { 1: { halign: "right" } }
                 });
-
+    
                 // Desglose de Aportes
                 doc.setFontSize(12);
                 doc.setFont("helvetica", "bold");
                 doc.text("Desglose de Aportes", 14, 145);
-
+    
                 const tableData = [
                     [{ content: "Aportes del Trabajador", colSpan: 3, styles: { halign: "center", fontStyle: "bold" } }],
                     ["AFP", "10%", `$${afp.toLocaleString("es-CL")}`],
@@ -199,19 +197,19 @@
                     ["Salud", "7%", `$${health.toLocaleString("es-CL")}`],
                     ["Seguro de Cesantía", contractType === "Indefinido" ? "2.4%" : "0%", `$${cesantiaWorker.toLocaleString("es-CL")}`],
                     [{ content: "Total Descuentos Trabajador", colSpan: 2, styles: { fontStyle: "bold" } }, `$${totalWorkerDeductions.toLocaleString("es-CL")}`],
-
+    
                     [{ content: "Aportes del Empleador", colSpan: 3, styles: { halign: "center", fontStyle: "bold" } }],
                     ["Seguro de Cesantía", contractType === "Indefinido" ? "2.4%" : "3%", `$${cesantiaEmployer.toLocaleString("es-CL")}`],
                     ["Seguro de accidentes y enfermedades profesionales", "0.9%", `$${mutualSecurity.toLocaleString("es-CL")}`],
                     ["Seguro de Invalidez y Sobrevivencia", "1.38%", `$${sis.toLocaleString("es-CL")}`]
                 ];
-
+    
                 if (householdWorker === "Si") {
                     tableData.push(["Fondo de Indemnización", "1.11%", `$${fondo_indem.toLocaleString("es-CL")}`]);
                 }
-
+    
                 tableData.push([{ content: "Total Aportes Empleador", colSpan: 2, styles: { fontStyle: "bold" } }, `$${totalEmployerContributions.toLocaleString("es-CL")}`]);
-
+    
                 // Generación de la tabla con la columna de porcentaje
                 doc.autoTable({
                     startY: 150,
@@ -222,11 +220,10 @@
                     headStyles: { fillColor: [41, 128, 185], textColor: 255, fontStyle: "bold" },
                     columnStyles: { 0: { halign: "left" }, 1: { halign: "center" }, 2: { halign: "right" } }
                 });
-
+    
                 // Guardar el PDF
                 doc.save("Reporte_Sueldo.pdf");
             }
-
         </script>
     </main>
     <footer class="footer">

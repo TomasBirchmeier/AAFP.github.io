@@ -1,7 +1,7 @@
 body {
     margin-top: 40px;
     font-family: Arial, sans-serif;
-    background-color: #c5e1ee;
+    background-color: #d5edf7;
     padding-top: 130px; /
 }
 body {
@@ -21,11 +21,8 @@ header {
     border-bottom: 1px solid #e0e0e0;
     z-index: 1000;
 }
-.content {
-    min-height: 100vh;
-    padding-top: 50px;  /* Ajusta este valor según la altura de tu encabezado */
-    /* Si el encabezado tiene 10px de padding y cualquier otro valor de altura, 
-       usa un valor mayor que la altura total del encabezado */
+h1 {
+    margin-top: 20px; /* Ajusta el valor según necesites */
 }
 .logo {
     height: 120px;
@@ -54,6 +51,9 @@ html, body {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+}
+.main-content {
+    flex: 1;
 }
 .page-section {
     height: 100vh; /* Ocupa el 100% de la altura de la ventana *//* Ancla en el inicio al hacer scroll */
@@ -158,12 +158,13 @@ nav a:hover {
 }
 .content {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 .content h1 {
     text-align: center;
     font-size: 2.5rem;
     color: #0073e6;
+    margin-top: 40px; /* Aumenta este valor según necesites */
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -420,7 +421,7 @@ nav a:hover {
     max-width: 600px;
     background: white;
     padding: 20px;
-    margin: 100px auto 20px; /* Espacio extra arriba para que no se solape con el header */
+    margin: 100px auto 70px; /* Espacio extra arriba para que no se solape con el header */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
