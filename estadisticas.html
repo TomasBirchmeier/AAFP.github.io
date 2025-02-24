@@ -36,18 +36,19 @@
             <a href="estadisticas.html">Estadísticas</a>
         </nav>
     </header>
-    <main class="content" id="estadisticas">
-        <h1>Estadísticas Mercado laboral</h1>
-        <div class="page-section" id="estadisticas">
-            <section >
+    <main class="content">
+        <h1>Estadísticas del Mercado Laboral</h1>
+        <section class="page-section">
+            <div style="max-width: 800px; margin: 0 auto; width: 100%;">
                 <div class="flourish-embed flourish-chart" data-src="visualisation/21575552">
                     <script src="https://public.flourish.studio/resources/embed.js"></script>
                     <noscript>
-                        <img src="https://public.flourish.studio/visualisation/21575552/thumbnail" width="100%" alt="chart visualization" />
+                        <img src="https://public.flourish.studio/visualisation/21575552/thumbnail" alt="Gráfico de Flourish" />
                     </noscript>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+
         <div class="tableauPlaceholder" id="vizContainer" style="width: 100%; max-width: 1200px; height: 700px; margin: auto;">
             <noscript>
                 <a href="#"><img alt="Tasa de Informalidad en Chile (%)" 
@@ -69,15 +70,6 @@
                 <param name="filter" value="publish=yes" />
             </object>
         </div>
-        
-        <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let script = document.createElement("script");
-            script.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
-            document.body.appendChild(script);
-        });
-        </script>
-        
     </main>
     <footer class="footer">
         <div class="footer-container">
@@ -87,7 +79,6 @@
                     <img src="img/LogoNewAAFP-White (1).svg" alt="Logo AAFP" />
                 </a>
             </div>
-            
             <!-- Imágenes a la derecha con enlaces -->
             <div class="footer-images">
                 <a href="https://www.afpcapital.cl/" target="_blank">
@@ -108,5 +99,12 @@
             </div>
         </div>
     </footer>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let script = document.createElement("script");
+        script.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+        document.body.appendChild(script);
+    });
+    </script>
 </body>
 </html>
