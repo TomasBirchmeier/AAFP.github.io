@@ -24,7 +24,11 @@ header {
 .logo {
     height: 120px;/* Ajusta este valor para moverlo más a la izquierda */
 }
-
+.content {
+    padding-top: 100px;  /* Ajusta este valor según la altura de tu encabezado */
+    /* Si el encabezado tiene 10px de padding y cualquier otro valor de altura, 
+       usa un valor mayor que la altura total del encabezado */
+}
 .header-title {
     font-size: 1.8rem;
     font-weight: bold;
@@ -171,6 +175,9 @@ nav a:hover {
     .text-overlay {
         font-size: 1.5vw; /* Tamaño adaptado al ancho del viewport */
     }
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
     header {
         position: fixed;
         top: 0;
@@ -184,11 +191,7 @@ nav a:hover {
         border-bottom: 1px solid #e0e0e0;
         z-index: 1000;
     }
-    /* Espacio extra en el body para que el contenido no se oculte debajo del header */
-    #steps1, #benefits, #costs {
-        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
-    }
-
+    /* Espacio extra en el body para que el contenido no se oculte debajo del header *
     /* Añadir espacio en el body para que el contenido no se oculte debajo del header */
     body {
         padding-top: 120px; /* Asegura que el contenido no se quede bajo el header */
@@ -429,23 +432,23 @@ nav a:hover {
 
 /* Colores para cada rol */
 .role-box:nth-child(1) {
-    background-color: #ff7f50; /* Naranja */
+    background-color: #6db1f9; /* Naranja */
 }
 
 .role-box:nth-child(2) {
-    background-color: #6a5acd; /* Azul violeta */
+    background-color: #6db1f9; /* Azul violeta */
 }
 
 .role-box:nth-child(3) {
-    background-color: #3cb371; /* Verde */
+    background-color: #05b4c4; /* Verde */
 }
 
 .role-box:nth-child(4) {
-    background-color: #20b2aa; /* Verde agua */
+    background-color: #05b4c4; /* Verde agua */
 }
 
 .role-box:nth-child(5) {
-    background-color: #ff6347; /* Rojo tomate */
+    background-color: #05b4c4; /* Rojo tomate */
 }
 
 .role-box:nth-child(6) {
@@ -552,11 +555,12 @@ select {
     scroll-margin-top: 60px;
 }
 
+
 .roles-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     width: 80%;
+    justify-content: center;
 }
 
 
@@ -627,6 +631,10 @@ select {
     .info-box {
         width: 90%; /* Hacer que el cuadro de información ocupe un poco más de espacio */
     }
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
+
 }
 @media (max-width: 461px) {
     .header-title {
@@ -638,6 +646,17 @@ select {
     header {
         padding: 10px 20px; /* Reducir el padding del header */
     }
+    .content { 
+        transform: scale(0.75);
+        transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
+    }
+    .roles-container {
+        grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    }
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
+    }
 }
 @media (max-width: 400px) {
     .header-title {
@@ -648,6 +667,17 @@ select {
     }
     header {
         padding: 10px 20px; /* Reducir el padding del header */
+    }
+    .content { 
+        transform: scale(0.75);
+        transform-origin: top center; /* Mantiene el origen de la escala en la parte superior */
+    }
+    .roles-container {
+        grid-template-columns: 1fr; /* Los roles se apilan en una sola columna */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    }
+    #steps1, #benefits, #costs {
+        scroll-margin-top: 60px; /* Ajusta a la altura de tu header */
     }
 }
 .subcategory-container {
@@ -664,6 +694,7 @@ select {
     background-color: #fff; /* Sobrescrito por estilo inline */
     transition: background-color 0.3s, transform 0.3s;
     text-align: center;
+    justify-self: center;
 }
 
 .subcategory-box:hover {
@@ -671,7 +702,12 @@ select {
     transform: translateY(-2px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
+.button-hover {
+    transition: transform 0.3s ease; /* Transición suave */
+}
+.button-hover:hover {
+    transform: scale(1.05); /* Agranda el botón al pasar el mouse */
+} 
 .subcategory-content p {
     margin: 5px 0;
     font-size: 19px;
@@ -894,4 +930,32 @@ iframe {
 }
 .img-modelo {
     height: 1000px; /* Ajusta el tamaño según lo necesites */
+}
+.subcategory-box-custom {
+    display: block;
+    background-color: #298f0a;
+    color: white;
+    text-align: left;
+    padding: 15px 20px; /* Ajusta este valor para cambiar el grosor */
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: padding 0.3s ease-in-out;
+}
+
+/* Cambio de grosor en hover */
+.subcategory-box-custom:hover {
+    padding: 18px 24px; /* Aumenta el grosor cuando se pasa el mouse */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .role-box-custom {
+        padding: 15px;
+    }
+    .subcategory-box-custom {
+        padding: 12px 16px;
+        font-size: 16px;
+    }
 }

@@ -7,7 +7,7 @@ body {
 
 }
 body {
-    zoom: 70%; /* Reduce el zoom al 80% */
+    zoom: 75%; /* Reduce el zoom al 80% */
 }
 
 header {
@@ -348,15 +348,6 @@ nav a:hover {
 /* Contenedor de los roles */
 
 /* Estilos para cada rectángulo de rol */
-.roles-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin: 0 auto;
-    width: 80%;
-}
-
-/* Estilos para cada rectángulo de rol */
 .role-box {
     padding: 20px;
     border-radius: 8px;
@@ -364,6 +355,7 @@ nav a:hover {
     text-align: center;
     font-size: 1.1em;
 }
+
 /* Colores para cada rol */
 .role-box:nth-child(1) {
     background-color: #6db1f9; /* Naranja */
@@ -486,7 +478,6 @@ select {
 .roles-section h1 {
     margin-bottom: 20px;
     color: #333;
-    scroll-margin-top: 60px;
 }
 
 .roles-container {
@@ -509,25 +500,6 @@ select {
     max-width: 600px;
     text-align: center;
     line-height: 1.6; /* Altura de línea */
-}
-
-#steps1:before {
-    content: "";
-    display: block;
-    height: 160px; /* Ajusta este valor al alto del header */
-    margin-top: -150px;
-}
-#benefits:before {
-    content: "";
-    display: block;
-    height: 160px; /* Ajusta este valor al alto del header */
-    margin-top: -150px;
-}
-#costs:before {
-    content: "";
-    display: block;
-    height: 160px; /* Ajusta este valor al alto del header */
-    margin-top: -150px;
 }
 
 /* Media Queries para hacer el diseño responsive */
@@ -756,120 +728,4 @@ select {
 }
 .img-modelo {
     height: 1000px; /* Ajusta el tamaño según lo necesites */
-}
-.custom-button {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 26px;
-    color: white;
-    background-color: #28a745; /* Verde */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    width: auto; /* Ancho ajustable según contenido */
-    transition: background-color 0.3s ease;
-}
-
-.custom-button:hover {
-    background-color: #218838; /* Verde más oscuro */
-}
-.course-section {
-    height: 100vh;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px;
-}
-
-.course-box {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
-}
-
-.course-box h2 {
-    color: #333;
-}
-
-.course-box p {
-    color: #555;
-    font-size: 18px;
-    line-height: 1.5;
-}
-.course-container {
-    display: flex;
-    align-items: center; /* Alinea verticalmente */
-    justify-content: start; /* Alinea la imagen a la izquierda */
-    background-color: #fcf5e3; /* Puedes cambiarlo según el diseño */
-    padding: 20px;
-    border-radius: 10px; /* Bordes redondeados */
-    max-width: 5000px; /* Ancho máximo */
-    width: 90%; /* Se ajusta al tamaño de la pantalla */
-    margin: 20px auto; /* Centrado */
-    gap: 15px; /* Espacio entre la imagen y el texto */
-}
-
-.course-container img {
-    width: 20%; /* La imagen ocupará el 30% del contenedor */
-    height: auto; /* Mantiene la proporción */
-    border-radius: 10px;
-}
-
-.course-content {
-    padding: 20px;
-    color: rgb(0, 0, 0);
-    flex: 1;
-    text-align: justify;
-}
-
-.course-content h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.course-content p {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.btn-course {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #007bff; /* Azul, puedes cambiarlo */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-/* Responsive: Para pantallas pequeñas */
-@media (max-width: 600px) {
-    .course-container {
-        flex-direction: column; /* Apila la imagen y el texto en móviles */
-        text-align: center;
-    }
-
-    .course-container img {
-        width: 80%; /* La imagen se hace más grande en pantallas pequeñas */
-    }
-}
-
-.btn-course {
-    display: inline-block;
-    background-color: #ffb703;
-    color: #000;
-    padding: 10px 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.btn-course:hover {
-    background-color: #ff9f1c;
 }
