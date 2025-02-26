@@ -147,11 +147,18 @@
         </div>
         <!-- Sección de beneficios -->
         <div id="benefits" class="container my-5">
-            <h3 class="fw-bold" style="color: #31ad0b;">Beneficios:</h3>
-            <div style="margin-left: 30px; text-align: left; font-size: 25px; font-weight: bold; color: #31ad0b;">
+            <h2 class="section-title p-3" style="text-align: center; color: #31ad0b;">
+                <strong>¿Cuáles son los beneficios de una relación laboral formal?</strong>
+            </h2>
+            <p style="text-align: justify; font-size: 21px; color: #272727; max-width: 1300px; margin: 0 auto;">
+                Tener una relación laboral formal brinda seguridad, estabilidad y acceso a beneficios como salud, previsión y derechos laborales. A continuación, se detalla el listado de beneficios para trabajadores y empleadores.
+            </p>
+
+        
+            <div style="margin-left: 30px; text-align: left; font-size: 25px; font-weight: bold; color: #31ad0b; margin-top: 10px;">
                 <span>Trabajadores</span>
             </div>
-            <ul class="list-unstyled">
+            <ul class="list-unstyled p-3">
                 <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
                     <div class="d-flex align-items-start">
                         <div class="icon-container d-flex justify-content-center align-items-center me-3">
@@ -159,18 +166,6 @@
                         </div>
                         <span style="display: block; margin-left: 20px; text-align: justify;font-size: 20px;">
                             <strong>Pago de Licencias:</strong><br>Al cotizar regularmente en una AFP, tendrás derecho a pago de licencia medica en caso de enfermedad o accidente.
-                        </span>
-                    </div>
-                    <!-- Botón -->
-                   
-                </li>
-                <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
-                    <div class="d-flex align-items-start">
-                        <div class="icon-container d-flex justify-content-center align-items-center me-3">
-                            <img src="img/jubilacion.png" alt="Icono beneficio 1" style="width: 70px; height: 70px;" />
-                        </div>
-                        <span style="display: block; margin-left: 20px; text-align: justify;font-size: 20px;">
-                            <strong>Una pensión mayor:</strong><br>Mientras mayor sea la densidad de cotización, mayor será tu ahorro. Por lo tanto, recibiras una pensión más alta.
                         </span>
                     </div>
                     <!-- Botón -->
@@ -232,7 +227,7 @@
             <div style="margin-left: 30px; text-align: left; font-size: 25px; font-weight: bold; color: #31ad0b;">
                 <span>Empleadores</span>
             </div>
-            <ul class="list-unstyled">
+            <ul class="list-unstyled p-3">
                 <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
                 <div class="d-flex align-items-start">
                     <div class="icon-container d-flex justify-content-center align- items-center me-3">
@@ -245,29 +240,84 @@
                 </li>
             </ul>
         </div>
-        
-        <!-- Sección de costos -->
-        <div id="costs" class="container my-5">
-            <h3 class="fw-bold" style="color:#ff1313c7;">¿Cuáles son los costos?:</h3>
-            <ul class="list-unstyled">
-                <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
-                    <div class="d-flex align-items-start">
-                        <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
-     style="width: 40px; height: 40px; background-color: #ff1313c7;">
-                            <strong>1</strong> <!-- Número en negrita dentro del círculo -->
-                        </div>
-                        <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
-                            <span>
-                                <strong>Realizar el trámite no tiene ningun costo</strong>
-                            </span>
-        
-                        </div>
-                    </div>
-                    
-                </li>
-
-            </ul>
+             
+        <div class="roles-container" style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px; padding: 20px;">
+            <!-- Rectángulo grande -->
+            <div class="role-box" style="background-color: #60d03a; padding: 25px; border-radius: 12px; text-align: center; width: 650px;"
+                onmouseover="this.style.backgroundColor='#53b432';" 
+                onmouseout="this.style.backgroundColor='#60d03a';">
+                
+                <p style="font-size: 35px; font-weight: bold; color: white; margin: 0;">Beneficios</p>
+                
+                <!-- Rectángulo más pequeño dentro -->
+                <div class="subcategory-container" style="margin-top: 10px;">
+                    <a href="beneficios.html" class="subcategory-box" 
+                        style="background-color: #298f0a; padding: 12px 25px; border-radius: 8px; text-align: center; color: white; text-decoration: none; font-size: 18px; font-weight: bold; display: block; transition: transform 0.2s, background-color 0.3s;"
+                        aria-label="Trabajador que emite boleta de honorarios ante el SII"
+                        onmouseover="this.style.backgroundColor='#206b07'; this.style.transform='scale(1.05)';"
+                        onmouseout="this.style.backgroundColor='#298f0a'; this.style.transform='scale(1)';">
+                        
+                        Descubre más
+                        
+                    </a>
+                </div>
+            </div>
         </div>
+        <div id="costs" class="container my-5">
+            <h2 class="section-title p-3" style="text-align: center;color: #ff1313c7;">
+                <strong>¿Cuáles son los costos de la formalidad?</strong>
+            </h2>
+            <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
+                <div class="d-flex align-items-start">
+                    <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
+ style="width: 40px; height: 40px; background-color: #ff1313c7;">
+                        <strong>1</strong> <!-- Número en negrita dentro del círculo -->
+                    </div>
+                    <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                        <span>
+                            <strong>Realizar el trámite no tiene ningun costo</strong>
+                        </span>
+                    </div>
+                </div>
+            </li>
+            <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
+                <div class="d-flex align-items-start">
+                    <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
+ style="width: 40px; height: 40px; background-color: #ff1313c7;">
+                        <strong>2</strong> <!-- Número en negrita dentro del círculo -->
+                    </div>
+                    <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
+                        <span>
+                            <strong>La regularización del empleo implica un aumento de pago gracias a las cotizaciones, en el siguiente simulador puedes estimar su costo</strong>
+                        </span>
+                    </div>
+                </div>
+            </li>
+        </div>
+        <div class="roles-container" style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px; padding: 20px;">
+            <!-- Rectángulo grande -->
+            <div class="role-box" style="background-color: #d03434; padding: 25px; border-radius: 12px; text-align: center; width: 650px;"
+                onmouseover="this.style.backgroundColor='#b32b2b';" 
+                onmouseout="this.style.backgroundColor='#d03434';">
+                
+                <p style="font-size: 35px; font-weight: bold; color: white; margin: 0;">Simulador de Sueldo</p>
+                
+                <!-- Rectángulo más pequeño dentro -->
+                <div class="subcategory-container" style="margin-top: 10px;">
+                    <a href="simulador2.html" class="subcategory-box" 
+                        style="background-color: #9c1f1f; padding: 12px 25px; border-radius: 8px; text-align: center; color: white; text-decoration: none; font-size: 18px; font-weight: bold; display: block; transition: transform 0.2s, background-color 0.3s;"
+                        aria-label="Información sobre costos"
+                        onmouseover="this.style.backgroundColor='#7f1919'; this.style.transform='scale(1.05)';"
+                        onmouseout="this.style.backgroundColor='#9c1f1f'; this.style.transform='scale(1)';">
+                        
+                        Descubre aqui
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        
         <!-- Sección de pasos -->
          
         <div id="steps1" class="container my-5">

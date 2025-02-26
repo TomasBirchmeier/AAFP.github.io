@@ -27,7 +27,7 @@
             <a href="estadisticas.html">Estadísticas</a>
         </nav>
     </header>
-    <main class="content">
+    <main class="content flex-grow-1">
         <h1>Trabajador por cuenta propia que emite boleta</h1>
         <div id="slider" class="slider-container">
             <div class="slides">
@@ -185,18 +185,25 @@
             <ul>
         </div>
         <div id="benefits" class="container my-5">
-            <h3 class="fw-bold" style="color: #31ad0b;">¿Cuáles son los Beneficios de cotizar?:</h3>
-            <p style="font-size: 20px; line-height: 1.6;justify-content: left;text-align: left;">
-                Quienes emiten boletas de honorarios, al pagar sus cotizaciones a través de la Operación Renta de cada año, acceden a la misma protección que los regímenes de seguridad social existentes en Chile, es decir:
+            <h2 class="section-title p-3" style="text-align: center; color: #31ad0b;">
+                <strong>¿Cuáles son los beneficios de estar formal?</strong>
+            </h2>
+            <p style="text-align: justify; font-size: 21px; color: #272727; max-width: 1300px; margin: 0 auto;">
+                Tener una trabajo formal brinda seguridad, estabilidad y acceso a beneficios como salud, previsión y derechos laborales. A continuación, se detalla el listado de beneficios.
             </p>
-            <ul class="list-unstyled">
+
+        
+            <div style="margin-left: 30px; text-align: left; font-size: 25px; font-weight: bold; color: #31ad0b; margin-top: 10px;">
+                <span>Trabajadores</span>
+            </div>
+            <ul class="list-unstyled p-3">
                 <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
                     <div class="d-flex align-items-start">
                         <div class="icon-container d-flex justify-content-center align-items-center me-3">
                             <img src="img/certificado.png" alt="Icono beneficio 1" style="width: 70px; height: 70px;" />
                         </div>
                         <span style="display: block; margin-left: 20px; text-align: justify;font-size: 20px;">
-                            <strong>Salud:</strong><br> Acceso cobertura respecto a accidentes y enfermedades de origen común (atención médica ambulatoria y hospitalaria, licencia médica, subsidios de Incapacidad Laboral (SIL), y subsidios maternales parentales).
+                            <strong>Pago de Licencias:</strong><br>Al cotizar regularmente en una AFP, tendrás derecho a pago de licencia medica en caso de enfermedad o accidente.
                         </span>
                     </div>
                     <!-- Botón -->
@@ -209,7 +216,7 @@
                         </div>
                         <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
                             <span>
-                                <strong>Ley SANNA:</strong> el seguro está dirigido a padres, madres y tutores para atención, acompañamiento y cuidado personal de hijos e hijas menores de edad, que se encuentran en riesgo vital y grave condición de salud, para que puedan ausentarse justificadamente de su trabajo por un tiempo determinado. Durante este período se otorga derecho a un subsidio que reemplaza total o parcialmente su remuneración o renta mensual.
+                                <strong>Ley SANNA:</strong><br>Seguro para padres o quienes estén a cargo de niños con una condición grave de salud, para que puedan ausentarse de ser necesario.
                             </span>
                     
                         </div>
@@ -223,7 +230,7 @@
                         </div>
                         <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
                             <span>
-                                <strong>Seguridad Laboral:</strong> Te protege frente 
+                                <strong>Seguridad Laboral:</strong><br>Te protege frente 
                                 a los accidentes a causa o con ocasión del trabajo, accidentes de trayecto a tu trabajo y/o 
                                 ante enfermedades causadas de manera directa por el ejercicio de tu trabajo. 
                             </span>
@@ -237,7 +244,7 @@
                         </div>
                         <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
                             <span>
-                                <strong>Cuota mortuoria:</strong> Beneficio que financia los gastos del funeral de un afiliado que ha fallecido.
+                                <strong>Cuota mortuoria:</strong><br>Beneficio que financia los gastos del funeral de un afiliado que ha fallecido.
                             </span>
                         </div>
                     </div>
@@ -249,14 +256,38 @@
                         </div>
                         <div style="margin-left: 20px; text-align: justify;font-size: 20px;">
                             <span>
-                                <strong>Protección de Salud:</strong> Cuentas con bonificación en prestaciones médicas bajo la modalidad de libre elección, ya sea en FONASA o la isapre que elijas.
+                                <strong>Protección de Salud:</strong><br>Cuentas con bonificación en prestaciones médicas bajo la modalidad de libre elección, ya sea en FONASA o la isapre que elijas.
                             </span>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
-        
+             
+        <div class="roles-container" style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px; padding: 20px;">
+            <!-- Rectángulo grande -->
+            <div class="role-box" style="background-color: #60d03a; padding: 25px; border-radius: 12px; text-align: center; width: 650px;"
+                onmouseover="this.style.backgroundColor='#53b432';" 
+                onmouseout="this.style.backgroundColor='#60d03a';">
+                
+                <p style="font-size: 35px; font-weight: bold; color: white; margin: 0;">Beneficios</p>
+                
+                <!-- Rectángulo más pequeño dentro -->
+                <div class="subcategory-container" style="margin-top: 10px;">
+                    <a href="beneficios.html" class="subcategory-box" 
+                        style="background-color: #298f0a; padding: 12px 25px; border-radius: 8px; text-align: center; color: white; text-decoration: none; font-size: 18px; font-weight: bold; display: block; transition: transform 0.2s, background-color 0.3s;"
+                        aria-label="Trabajador que emite boleta de honorarios ante el SII"
+                        onmouseover="this.style.backgroundColor='#206b07'; this.style.transform='scale(1.05)';"
+                        onmouseout="this.style.backgroundColor='#298f0a'; this.style.transform='scale(1)';">
+                        
+                        Descubre más
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+      
+
         <!-- Sección de costos -->
         <div id="costs" class="container my-5">
             <h3 class="fw-bold" style="color:#ff1313c7;">¿Cuáles son los costos de cotizar?:</h3>
@@ -286,16 +317,35 @@
                             <span>
                                 <strong>Simulador de cotizaciones:</strong><br>Para realizar una estimación de las cotizaciones, en el siguiente enlace podrás utilizar el simulador disponible de la página de previsión social . Este te permitirá analizar y comparar las dos alternativas ofrecidas: cobertura parcial y cobertura completa.
                             </span> 
-                            <div class="text-start mt-3 button-hover">
-                                <a href="https://www.previsionsocial.gob.cl/simulador/" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="background-color: #ff1313c7;" >
-                                    Visita el simulador
-                                </a>
-                            </div>
+                           
                         </div>
                     </div> 
                 </li>
             </ul>
         </div>
+        <div class="roles-container" style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px; padding: 20px;">
+            <!-- Rectángulo grande -->
+            <div class="role-box" style="background-color: #d03434; padding: 25px; border-radius: 12px; text-align: center; width: 650px;"
+                onmouseover="this.style.backgroundColor='#b32b2b';" 
+                onmouseout="this.style.backgroundColor='#d03434';">
+                
+                <p style="font-size: 35px; font-weight: bold; color: white; margin: 0;">Simulador de Cotizaciones</p>
+                
+                <!-- Rectángulo más pequeño dentro -->
+                <div class="subcategory-container" style="margin-top: 10px;">
+                    <a href="https://www.previsionsocial.gob.cl/simulador/" class="subcategory-box" 
+                        style="background-color: #9c1f1f; padding: 12px 25px; border-radius: 8px; text-align: center; color: white; text-decoration: none; font-size: 18px; font-weight: bold; display: block; transition: transform 0.2s, background-color 0.3s;"
+                        aria-label="Información sobre costos"
+                        onmouseover="this.style.backgroundColor='#7f1919'; this.style.transform='scale(1.05)';"
+                        onmouseout="this.style.backgroundColor='#9c1f1f'; this.style.transform='scale(1)';">
+                        
+                        Descubre aqui
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+        
         <!-- Sección de pasos -->
         <div id="steps1" class="container my-5">
             <h3 class="text-center text-primary fw-bold mb-4">Pasos para realizar la operación renta</h3>
@@ -383,8 +433,8 @@
                 <iframe class="videoFrame" src="" frameborder="0" allow="autoplay" allowfullscreen></iframe>
             </div>
         </div>
-        <div id="questions" class="container my-5 p-3 rounded" style=" padding-top: 30px;padding-bottom: 30px;">
-            <h3 class="text-center  text-dark fw-bold mb- ">Preguntas Frecuentes</h3>
+        <div id="questions" class="container my-5 p-3 rounded" style=" padding-top: 30px">
+            <h3 class="text-center  text-dark fw-bold ">Preguntas Frecuentes</h3>
             <ul class="list-unstyled">
                 <li class="d-flex flex-column mb-3 p-3 rounded" style="background-color: #fdf2b4;">
                     <div class="d-flex align-items-start">
@@ -517,12 +567,37 @@ obstante, hacia 2028 se hará por el mismo monto.
                 </li>
             </ul>
         </div>
-        
-        
-        <!-- Smooth scrolling script -->
-    
-        <!-- Vincula el archivo de Bootstrap JS -->
-        <script>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo a la izquierda -->
+            <div class="footer-logo">
+                <a href="https://www.aafp.cl" target="_blank">
+                    <img src="img/LogoNewAAFP-White (1).svg" alt="Logo AAFP" />
+                </a>
+            </div>
+            
+            <!-- Imágenes a la derecha con enlaces -->
+            <div class="footer-images">
+                <a href="https://www.afpcapital.cl/" target="_blank">
+                    <img src="img/capital.svg" alt="Capital" />
+                </a>
+                <a href="https://www6.cuprum.cl/" target="_blank">
+                    <img src="img/cuprum.svg" alt="Cuprum" />
+                </a>
+                <a href="https://www.afphabitat.cl" target="_blank">
+                    <img src="img/habitat.svg" alt="Habitat" />
+                </a>
+                <a href="https://www.provida.cl" target="_blank">
+                    <img src="img/FooterProvida.svg" alt="Provida" />
+                </a>
+                <a href="https://nueva.afpmodelo.cl/afiliados" target="_blank">
+                    <img src="img/modelo.svg" alt="Modelo" />
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
         // Slider
             let currentIndex = 0; // Índice de la imagen actual
             const slides = document.querySelector('.slides');
@@ -566,38 +641,7 @@ obstante, hacia 2028 se hará por el mismo monto.
                     });
                 });
             });
-            function calcularCotizaciones() {
-                const sueldo = parseFloat(document.getElementById("sueldo").value);
-
-                if (isNaN(sueldo) || sueldo <= 0) {
-                    alert("Por favor, introduce un sueldo válido.");
-                    return;
-                }
-
-                // Porcentajes de cotización
-                const afp = 10; // AFP 10%
-                const salud = 7; // Salud 7%
-                const cesantia = 0.6; // Seguro de cesantía 0.6%
-                
-                // Cálculos
-                const afpMonto = sueldo * (afp / 100);
-                const saludMonto = sueldo * (salud / 100);
-                const cesantiaMonto = sueldo * (cesantia / 100);
-                const totalDeducciones = afpMonto + saludMonto + cesantiaMonto;
-                const sueldoLiquido = sueldo - totalDeducciones;
-
-                // Mostrar resultados con formato chileno
-                const resultadoDiv = document.getElementById("resultado");
-                resultadoDiv.style.display = "block";
-                resultadoDiv.innerHTML = `
-                    <p><strong>Sueldo bruto:</strong> $${sueldo.toLocaleString("es-CL")}</p>
-                    <p><strong>Cotización AFP (10%):</strong> $${afpMonto.toLocaleString("es-CL")}</p>
-                    <p><strong>Cotización Salud (7%):</strong> $${saludMonto.toLocaleString("es-CL")}</p>
-                    <p><strong>Seguro de Cesantía (0.6%):</strong> $${cesantiaMonto.toLocaleString("es-CL")}</p>
-                    <p><strong>Total deducciones:</strong> $${totalDeducciones.toLocaleString("es-CL")}</p>
-                    <p><strong>Sueldo líquido:</strong> $${sueldoLiquido.toLocaleString("es-CL")}</p>
-                `;
-            }
+        
             function playVideo(container) {
                 const videoFrame = container.querySelector(".videoFrame");
                 const videoThumbnail = container.querySelector(".videoThumbnail");
@@ -614,37 +658,7 @@ obstante, hacia 2028 se hará por el mismo monto.
                 // Muestra el iframe
                 videoFrame.style.display = "block";
             }
-        </script>
-    </main>
-    <footer class="footer">
-        <div class="footer-container">
-            <!-- Logo a la izquierda -->
-            <div class="footer-logo">
-                <a href="https://www.aafp.cl" target="_blank">
-                    <img src="img/LogoNewAAFP-White (1).svg" alt="Logo AAFP" />
-                </a>
-            </div>
-            
-            <!-- Imágenes a la derecha con enlaces -->
-            <div class="footer-images">
-                <a href="https://www.afpcapital.cl/" target="_blank">
-                    <img src="img/capital.svg" alt="Capital" />
-                </a>
-                <a href="https://www6.cuprum.cl/" target="_blank">
-                    <img src="img/cuprum.svg" alt="Cuprum" />
-                </a>
-                <a href="https://www.afphabitat.cl" target="_blank">
-                    <img src="img/habitat.svg" alt="Habitat" />
-                </a>
-                <a href="https://www.provida.cl" target="_blank">
-                    <img src="img/FooterProvida.svg" alt="Provida" />
-                </a>
-                <a href="https://nueva.afpmodelo.cl/afiliados" target="_blank">
-                    <img src="img/modelo.svg" alt="Modelo" />
-                </a>
-            </div>
-        </div>
-    </footer>
+    </script>
 </body>
 </html>
        

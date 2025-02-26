@@ -151,19 +151,20 @@ nav a:hover {
     font-weight: bold;
 }
 .highlight-text {
-    font-size: 0.8em; /* Tamaño del texto destacado */
+    font-size: 1.5em; /* Tamaño del texto destacado */
     font-weight: bold; /* Texto en negrita */
     color: white; /* Texto en blanco */
-    background-color: red; /* Fondo rojo */
+    background-color: rgb(220, 18, 169); /* Fondo rojo */
     padding: 5px 10px; /* Espaciado interno */
     display: inline-block; /* Asegura que el fondo rodee solo el texto */
     border-radius: 5px; /* Bordes redondeados */
     margin-bottom: 10px; /* Espacio entre "¿Sabías que?" y el texto principal */
-    text-align: center; /* Centrar el texto si es necesario */
+    text-align: center;
+    max-width: 90%; /* Centrar el texto si es necesario */
 }
 .text-overlay {
     position: absolute;
-    top: 50px;
+    top: 10%;
     left: 5%;
     width: 90%;
     color: white;
@@ -263,15 +264,29 @@ nav a:hover {
 }
 .slider-container {
     position: relative;
-    width: 100%;
-    max-width: 1400px; /* Ancho máximo del slider */
-    height: 300px; /* Altura fija del rectángulo */
-    margin: 20px auto; /* Centrar el slider */
+    width: 90%; /* Se adapta al ancho del contenedor */
+    max-width: 1750px; /* Límite máximo */
+    aspect-ratio: 16 / 4; 
+    min-height: 300px;/* Relación de aspecto para un rectángulo equilibrado */
+    margin: 20px auto; /* Centrado */
     overflow: hidden;
     border: 2px solid #ddd;
     border-radius: 10px;
     background-color: #fff;
 }
+.slider-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita deformaciones */
+    object-position: bottom; /* Mantiene la parte inferior visible */
+    display: block; /* Evita espacios extra debajo de la imagen */
+}
+
+.slider-container img {
+    height: 100% !important;
+    object-position: bottom !important;
+}
+
 
 .slides {
     display: flex;

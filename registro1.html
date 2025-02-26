@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style4.css">
     
     <!-- Favicon -->
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -29,15 +29,18 @@
             <span class="bar"></span>
         </button>
         <nav id="nav-menu">
-            <a href="#tipos-de-cargo">Categorías de Trabajo</a>
-            <a href="#beneficios">Beneficios</a>
+            <a href="https://ahorropension.cl/">Curso de Capacitación</a>
+            <a href="empleadorpasos.html">Portal Empleador</a>
+            <a href="trabajadorpasos.html">Portal Trabajador</a>
+            <a href="simulador2.html">Simulador de Sueldo</a>
+            <a href="beneficios.html">Beneficios</a>
             <a href="estadisticas.html">Estadísticas</a>
         </nav>
     </header>
-    <main class="content">
+    <main class="content flex-grow-1">
         <h1>¿Cómo registrar un contrato?</h1>
         <div id="steps1" class="container my-5">
-            <ul class="list-unstyled">
+            <ul class="list-unstyled" style="margin-bottom: 135px;">
                 <li class="d-flex flex-column mb-3 p-3 bg-light rounded">
                     <div class="d-flex align-items-start">
                         <div class="circle-number d-flex justify-content-center align-items-center text-white rounded-circle me-3" 
@@ -72,98 +75,73 @@
                 </li>
             </ul>
         </div>
-        <script>
-            // Slider
-                let currentIndex = 0; // Índice de la imagen actual
-                const slides = document.querySelector('.slides');
-                const totalSlides = document.querySelectorAll('.slide').length;
-                const prevBtn = document.querySelector('.prev-btn');
-                const nextBtn = document.querySelector('.next-btn');
-                function showSlide(index) {
-                    slides.style.transform = `translateX(-${index * 100}%)`;
-                }
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Logo a la izquierda -->
+            <div class="footer-logo">
+                <a href="https://www.aafp.cl" target="_blank">
+                    <img src="img/LogoNewAAFP-White (1).svg" alt="Logo AAFP" />
+                </a>
+            </div>
+            
+            <!-- Imágenes a la derecha con enlaces -->
+            <div class="footer-images">
+                <a href="https://www.afpcapital.cl/" target="_blank">
+                    <img src="img/capital.svg" alt="Capital" />
+                </a>
+                <a href="https://www6.cuprum.cl/" target="_blank">
+                    <img src="img/cuprum.svg" alt="Cuprum" />
+                </a>
+                <a href="https://www.afphabitat.cl" target="_blank">
+                    <img src="img/habitat.svg" alt="Habitat" />
+                </a>
+                <a href="https://www.provida.cl" target="_blank">
+                    <img src="img/FooterProvida.svg" alt="Provida" />
+                </a>
+                <a href="https://nueva.afpmodelo.cl/afiliados" target="_blank">
+                    <img src="img/modelo.svg" alt="Modelo" />
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
     
-                function nextSlide() {
-                    currentIndex = (currentIndex + 1) % totalSlides; // Mueve al siguiente o vuelve al inicio
-                    showSlide(currentIndex);
-                }
-                function prevSlide() {
-                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Mueve al anterior o al final
-                    showSlide(currentIndex);
-                }
-    
-                // Botones de navegación manual
-                nextBtn.addEventListener('click', nextSlide);
-                prevBtn.addEventListener('click', prevSlide);
-    
-                // Desplazamiento automático
-                setInterval(nextSlide, 9000); // Cambiar cada 7 segundos
-                showSlide(currentIndex); // Mostrar la primera imagen
-                // menu
-                const menuToggle = document.querySelector('#menu-toggle');
-                const navMenu = document.querySelector('#nav-menu');
-    
-                menuToggle.addEventListener('click', () => {
-                    navMenu.classList.toggle('active');
+        const menuToggle = document.querySelector('#menu-toggle');
+        const navMenu = document.querySelector('#nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const target = document.querySelector(this.getAttribute('href'));
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    });
-                });
-                function calcularCotizaciones() {
-                    const sueldo = parseFloat(document.getElementById("sueldo").value);
-    
-                    if (isNaN(sueldo) || sueldo <= 0) {
-                        alert("Por favor, introduce un sueldo válido.");
-                        return;
-                    }
-    
-                    // Porcentajes de cotización
-                    const afp = 10; // AFP 10%
-                    const salud = 7; // Salud 7%
-                    const cesantia = 0.6; // Seguro de cesantía 0.6%
-                    
-                    // Cálculos
-                    const afpMonto = sueldo * (afp / 100);
-                    const saludMonto = sueldo * (salud / 100);
-                    const cesantiaMonto = sueldo * (cesantia / 100);
-                    const totalDeducciones = afpMonto + saludMonto + cesantiaMonto;
-                    const sueldoLiquido = sueldo - totalDeducciones;
-    
-                    // Mostrar resultados con formato chileno
-                    const resultadoDiv = document.getElementById("resultado");
-                    resultadoDiv.style.display = "block";
-                    resultadoDiv.innerHTML = `
-                        <p><strong>Sueldo bruto:</strong> $${sueldo.toLocaleString("es-CL")}</p>
-                        <p><strong>Cotización AFP (10%):</strong> $${afpMonto.toLocaleString("es-CL")}</p>
-                        <p><strong>Cotización Salud (7%):</strong> $${saludMonto.toLocaleString("es-CL")}</p>
-                        <p><strong>Seguro de Cesantía (0.6%):</strong> $${cesantiaMonto.toLocaleString("es-CL")}</p>
-                        <p><strong>Total deducciones:</strong> $${totalDeducciones.toLocaleString("es-CL")}</p>
-                        <p><strong>Sueldo líquido:</strong> $${sueldoLiquido.toLocaleString("es-CL")}</p>
-                    `;
-                }
-                function playVideo(container) {
-                    const videoFrame = container.querySelector(".videoFrame");
-                    const videoThumbnail = container.querySelector(".videoThumbnail");
-                    const playButton = container.querySelector(".play-button");
-                    const videoID = container.getAttribute("data-video");
-    
-                    // Asigna la URL con autoplay
-                    videoFrame.src = `https://www.youtube.com/embed/${videoID}?autoplay=1`;
-    
-                    // Oculta la miniatura y el botón
-                    videoThumbnail.style.display = "none";
-                    playButton.style.display = "none";
-    
-                    // Muestra el iframe
-                    videoFrame.style.display = "block";
-                }
-            </script>
+            });
+        });
         
-    
+        function playVideo(container) {
+            const videoFrame = container.querySelector(".videoFrame");
+            const videoThumbnail = container.querySelector(".videoThumbnail");
+            const playButton = container.querySelector(".play-button");
+            const videoID = container.getAttribute("data-video");
+
+            // Asigna la URL con autoplay
+            videoFrame.src = `https://www.youtube.com/embed/${videoID}?autoplay=1`;
+
+            // Oculta la miniatura y el botón
+            videoThumbnail.style.display = "none";
+            playButton.style.display = "none";
+
+            // Muestra el iframe
+            videoFrame.style.display = "block";
+        }
+    </script>
+</body>
+</html>
+       
+  
