@@ -233,32 +233,6 @@
         </section>
     </main>
     <script>
-        let currentIndex = 0; // Índice de la imagen actual
-        const slides = document.querySelector('.slides');
-        const totalSlides = document.querySelectorAll('.slide').length;
-        const prevBtn = document.querySelector('.prev-btn');
-        const nextBtn = document.querySelector('.next-btn');
-        function showSlide(index) {
-            slides.style.transform = `translateX(-${index * 100}%)`;
-         }
-
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % totalSlides; // Mueve al siguiente o vuelve al inicio
-            showSlide(currentIndex);
-        }
-        function prevSlide() {
-            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Mueve al anterior o al final
-            showSlide(currentIndex);
-        }
-
-            // Botones de navegación manual
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
-
-            // Desplazamiento automático
-        setInterval(nextSlide, 9000); // Cambiar cada 7 segundos
-        showSlide(currentIndex); 
-        // menu
         const menuToggle = document.querySelector('#menu-toggle');
         const navMenu = document.querySelector('#nav-menu');
 
